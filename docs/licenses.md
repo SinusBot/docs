@@ -4,11 +4,11 @@ So you own a large server and two instances are not enough for you? For this cas
 
 ## How to get a free extended license?
 
-We issue approx. one of those licenses per day (that's about 30 per month) but as this is a manual process, we do it in batches every couple of days. You can apply for such a license (if one is available) at our [[https://forum.sinusbot.com/license|License Page]]. If you've successfully committed the request, your license will be issued with the next batch. Please make sure to input the correct information as you would have to request a new license otherwise.
+We issue approx. one of those licenses per day (that's about 30 per month) but as this is a manual process, we do it in batches every couple of days. You can apply for such a license (if one is available) at our [License Page](https://forum.sinusbot.com/license). If you've successfully committed the request, your license will be issued with the next batch. Please make sure to input the correct information as you would have to request a new license otherwise.
 
 ## But all free licenses have been taken. Is there another way to obtain one?
 
-We do have a "Donor" group on our forums that you will get automatically if you[[https://forum.sinusbot.com/account/upgrades|donate]]. With this status, the license page will directly be open to you and you can request a license right away. However, please be aware that your license will not be issued directly but with the next batch (see above).
+We do have a "Donor" group on our forums that you will get automatically if you [donate](https://forum.sinusbot.com/account/upgrades). With this status, the license page will directly be open to you and you can request a license right away. However, please be aware that your license will not be issued directly but with the next batch (see above).
 
 ## How long does it take for the license to be approved?
 

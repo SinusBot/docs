@@ -54,6 +54,4 @@ You should also try manually downloading something with youtube-dl via the comma
 
 ### invalid character 'W' looking for beginning of value
 
-This means that youtube-dl is throwing an errror.
-
 *  Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`

@@ -10,6 +10,7 @@ Usually you don't need to edit too much in the config file as most of the import
 | EnableLocalFS      | (internal use only)                                                            | false                      |
 | EnableProfiler     | (internal use only; deprecated)                                                | false                      |
 | EnableWebStream    | allow the bot to export the audiostream via http or icecast                    | false                      |
+| ExternalFileBase   | a path where an external music library is stored                               |                            |
 | DataDir            | This can be used to specify the data directory the bot should use.             | ./data inside the bot root |
 | Hostname           | Hostname to use for the certificate when UseSSL is enabled                     |                            |
 | InstanceActionLimit| number of http requests / actions (per instance and second) before a limit will prevent further actions | 6 |

@@ -68,3 +68,6 @@ Prefix = "voice_lstm_de-DE/nfh/"
 Instances = 2
 ```
 
+You can get the proper settings for the PipelineFile and Prefix parameters from the corresponding .js files. Some voices (those that have files beginning with remote_) need to be downloaded separately first.
+
+The `Instances` parameter limits the number of concurrent synthesis processes - each of those consumes about 40-100 MB RAM and some CPU cycles. `Locale` is the locale parameter that is actually used by the bot.

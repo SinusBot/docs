@@ -38,7 +38,7 @@ Every script must register itself using the `registerPlugin` function. This func
 
 First, let's see what a manifest consists of. The manifest will determine which features are available to the script and also contain metadata and variables that will be shown in the web interface. It's also used to make sure the script works with the current version of the bot.
 
-<sxh js>
+```
 registerPlugin({
     name: 'Demo Script',
     version: '1.0',
@@ -49,7 +49,7 @@ registerPlugin({
 }, function(sinusbot, config) {
     ...
 });
-</sxh>
+```
 
 #### Mandatory fields
 
@@ -120,7 +120,7 @@ Use this function to setup event listeners and do stuff on initialization.
 
 Example
 
-<sxh js>
+```
 registerPlugin({
 	...
 }, function(sinusbot, config) {
@@ -129,7 +129,7 @@ registerPlugin({
 		// Do something...
 	});
 });
-</sxh>
+```
 	
 As said, the function will get called once the script gets activated either by enabling it in the web interface or when autorun is enabled.
 In this example an event handler is installed that will be called whenever a chat message has been sent.
