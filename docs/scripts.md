@@ -38,7 +38,7 @@ Every script must register itself using the `registerPlugin` function. This func
 
 First, let's see what a manifest consists of. The manifest will determine which features are available to the script and also contain metadata and variables that will be shown in the web interface. It's also used to make sure the script works with the current version of the bot.
 
-```
+```javascript
 registerPlugin({
     name: 'Demo Script',
     version: '1.0',
