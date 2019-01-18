@@ -1,0 +1,17 @@
+site_name: SinusBot Documentation
+theme:
+  name: 'material'
+  font: false
+  palette:
+    primary: 'red'
+    accent: 'red'
+nav:
+  - 'Introduction': 'index.md'
+  - 'Installation Linux': 'install.md'
+  - 'Using a reverse proxy': 'proxy.md'
+  - 'Scripting': 'scripts.md'
+  - 'Installing youtube-dl': 'youtube-dl.md'
+  - 'Text-to-Speech': 'tts.md'
+  - 'Speech Recognition': 'speechrecognition.md'
+  - 'Localization': 'locales.md'
+  - 'Configuration': 'configuration.md'
