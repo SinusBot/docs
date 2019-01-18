@@ -102,8 +102,6 @@ Using this, you can define which restricted modules the script wants to use. If 
 
 ##### vars (array)
 
-## Variables
-
 This is probably the most complex parameter as this defines the configuration interface that will be shown on the web interface of the bot.
 
 Current available variable types:
