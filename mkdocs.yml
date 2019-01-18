@@ -5,6 +5,8 @@ theme:
   palette:
     primary: 'red'
     accent: 'red'
+extra_css:
+  - extra.css
 nav:
   - 'Introduction': 'index.md'
   - 'Installation Linux': 'install.md'

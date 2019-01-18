@@ -1,0 +1,11 @@
+:root {
+    --red: #e13438;
+}
+
+[data-md-color-primary=red] .md-header {
+    background-color: var(--red);
+}
+
+[data-md-color-accent=red] .md-nav__link:focus, [data-md-color-accent=red] .md-nav__link:hover {
+    color: var(--red);
+}
