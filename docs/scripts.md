@@ -38,7 +38,7 @@ Every script must register itself using the `registerPlugin` function. This func
 
 First, let's see what a manifest consists of. The manifest will determine which features are available to the script and also contain metadata and variables that will be shown in the web interface. It's also used to make sure the script works with the current version of the bot.
 
-<sxh js>
+```
 registerPlugin({
     name: 'Demo Script',
     version: '1.0',
@@ -49,7 +49,7 @@ registerPlugin({
 }, function(sinusbot, config) {
     ...
 });
-</sxh>
+```
 
 #### Mandatory fields
 
@@ -96,21 +96,79 @@ Hides the script from the settings page. Should be used together with `autorun`.
 
 > Hidden scripts can not have variables (vars), since they'd never be shown and thus not configurable.
 
-
 ##### requiredModules ([]string)
 
-Using this, you can define which restricted modules the script wants to use. If it's not allowed via the config, the script will not load at all but instead return an error on startup. If you only optionally use features from restricted modules, don't use this but provide a fallback in your script.
+Using this, you can define which restricted modules the script wants to use. If it's not allowed via the config, the script will not load at all but instead return an error on startup. This field is mandatory if you use any restricted module from version 1.0 onwards.
 
 ##### vars (array)
 
-More information about the usage of variables can be found [[en:guides:features:scripts:variables|here]].
+## Variables
+
+This is probably the most complex parameter as this defines the configuration interface that will be shown on the web interface of the bot.
+
+Current available variable types:
+
+| Type      | Input |
+| --- | --- |
+| string    | Show a regular input element where the user can enter some text |
+| password  | like string but doesn't display the text you've entered |
+| strings   | set multiple strings |
+| multiline | this will display a text area where the user can enter several lines of text |
+| number    | Show a regular input element, but only accept numeric input from the user |
+| track     | %%Show an input where the user can search and specify a track that has been uploaded to the bot - the config variable will later on contain an object like this: { "url": "track://uuid", "title": "A short title of the track" } %%|
+| tracks    | select multiple tracks |
+| channel   | If the bot is connected, this displays a channel selector. The config variable will later on hold the channel-id of the selected channel |
+| select    | this will display a select box. All options need to specified in an array called options and the config value will later on hold the index to the selected option. |
+| checkbox  | this will display a checkbox |
+| array     | this allows the user to add an unspecified amount of items |
+
+Example of the string type usage:
+```
+{
+    name: 'ExampleName',
+    title: 'message type',
+    type: 'string',
+    placeholder: 'Some example placeholder'
+}
+```
+
+Example of the select type usage:
+
+```
+{
+    name: 'fooType',
+    title: 'Variations of foobar',
+    type: 'select',
+    options: ['Foo', 'Bar', 'Foobar', 'Barfoo']
+}
+```
+
+Example of the condition type with the above options example:
+
+```
+{
+    name: 'fooSwitch',
+    title: 'Selected fooType',
+    type: 'select',
+    conditions: [{        //make a field visible or invisible in the config with conditions
+        field: 'fooType', //this will tell to use the config field with the name "fooType"
+        value: 2,         //this will tell to use the 3rd index of the options of the selected type in this case "Foobar"
+    }]
+}
+```
+
+You can print these values in the log by using:
+
+```
+engine.log(config.ExampleName);
+engine.log(config.fooType);
+```
 
 ##### voiceCommands ([]string)
 
 This parameter is only used for the speech recognition feature and may contain one or more strings that are to be detected for the given script.
 Note that the speech recognition only works with licensed instances.
-You can find more details on how to use it here:
-[[en:guides:features:speechrecognition]]
+You can find more details on how to use it [here](speechrecognition).
 
 ### The Setup-Function
 
@@ -120,7 +178,7 @@ Use this function to setup event listeners and do stuff on initialization.
 
 Example
 
-<sxh js>
+```
 registerPlugin({
 	...
 }, function(sinusbot, config) {
@@ -129,7 +187,7 @@ registerPlugin({
 		// Do something...
 	});
 });
-</sxh>
+```
 	
 As said, the function will get called once the script gets activated either by enabling it in the web interface or when autorun is enabled.
 In this example an event handler is installed that will be called whenever a chat message has been sent.
