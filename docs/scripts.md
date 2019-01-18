@@ -1,12 +1,12 @@
 # Using & creating Scripts
 
-Your bot can be extended by installing or writing scripts. Such scripts can react on several events and control how the bot should react to them.
+Your bot can be extended by installing scripts from other users or by writing and activating your own scripts. Such scripts can react on several events and control how the bot should react to them.
 
-This can be a simple 'Hello' response when someone writes 'hello' to the bot or a pretty detailed leveling/xp system where the bot tracks the online time of each user.
+This can be a simple 'Hello' response when someone writes 'hello' to the bot or a pretty detailed leveling/xp system where the bot tracks the online time of each user. You can find many scripts from other users [here](https://forum.sinusbot.com/resources/categories/scripts.2/).
 
-The language the scripts have to be in is JavaScript (ECMAScript Version 5).
+The language the scripts have to be in is JavaScript (ECMAScript Version 5). Since version 1.0 you can now also use newer ES6 features.
 
-The full API documentation can be found [here](https://www.sinusbot.com/docs/scripting/).
+The full API documentation of the API that is available to you can be found [here](https://sinusbot.github.io/scripting-docs/).
 
 
 ## How to install a script?
