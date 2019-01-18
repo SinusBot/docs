@@ -17,3 +17,7 @@ nav:
   - 'Speech Recognition': 'speechrecognition.md'
   - 'Localization': 'locales.md'
   - 'Configuration': 'configuration.md'
+  - 'Reverse Proxy':
+    - 'NGINX': 'reverse-proxy-nginx.md'
+    - 'Apache2': 'reverse-proxy-apache2.md'
+    - 'Common Adaptations': 'reverse-proxy-common-adaptations.md'
