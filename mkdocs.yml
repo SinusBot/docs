@@ -9,15 +9,17 @@ extra_css:
   - extra.css
 nav:
   - 'Introduction': 'index.md'
-  - 'Installation Linux': 'install.md'
-  - 'Using a reverse proxy': 'proxy.md'
+  - 'Installation':
+    - 'Linux': 'installation-linux.md'
+    - 'Windows': 'installation-windows.md'
+    - 'Docker': 'installation-docker.md'
+    - 'youtube-dl': 'youtube-dl.md'
+    - 'Reverse Proxy':
+      - 'NGINX': 'reverse-proxy-nginx.md'
+      - 'Apache 2': 'reverse-proxy-apache2.md'
+      - 'Common Adaptations': 'reverse-proxy-common-adaptations.md'
   - 'Scripting': 'scripts.md'
-  - 'Installing youtube-dl': 'youtube-dl.md'
+  - 'Configuration': 'configuration.md'
   - 'Text-to-Speech': 'tts.md'
   - 'Speech Recognition': 'speechrecognition.md'
   - 'Localization': 'locales.md'
-  - 'Configuration': 'configuration.md'
-  - 'Reverse Proxy':
-    - 'NGINX': 'reverse-proxy-nginx.md'
-    - 'Apache2': 'reverse-proxy-apache2.md'
-    - 'Common Adaptations': 'reverse-proxy-common-adaptations.md'

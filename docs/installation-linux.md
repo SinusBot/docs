@@ -120,14 +120,6 @@ Stopping the bot
 
 Now login at `http://<your ip>:8087/` with user **admin** and the password provided on first run. (see [FAQ](https://forum.sinusbot.com/faq/what-is-the-default-username-and-password.2/) on how to reset)
 
-## Docker
-Detailed instructions on how to install the sinusbot on docker can be found on the [github page](https://github.com/SinusBot/docker). You can also check out the image directly on [Docker Hub](https://hub.docker.com/r/sinusbot/docker).
-
-	docker run -d -p 8087:8087 \
-	           -v scripts:/opt/sinusbot/scripts \
-	           -v data:/opt/sinusbot/data \
-	           --name sinusbot sinusbot/docker
-
 ## Troubleshooting
 
 If the bot doesn't connect and you only see a "INFO TSClient quit" every time you try to start the bot **via the webinterface**, you might need to set your locale info manually when starting up the bot. Try to start it with
