@@ -22,7 +22,7 @@ This is a little tutorial on how to use speech recognition. The feature is still
 
 ## Code Example
 
-```
+```javascript
 registerPlugin({
     name: 'Speech Recognition Demo',
     version: '1.0',

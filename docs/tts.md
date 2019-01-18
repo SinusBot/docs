@@ -22,13 +22,13 @@ Afterwards click `Save changes`.
 Hit `Alt+S` in the bot interface to run a test. If everything was successful, you should hear the bot saying what you entered after a short delay.
 
 Given you have a tts provider that handed you an URL in the form of
-	
+
 	http://a-great-tts-provider.com/doTTS?text=Test&locale=en
-	
+
 you will have to replace the "Test" in the URL with `__TEXT` and that "en" with `__LOCALE`, so that it looks like
-	
+
 	http://a-great-tts-provider.com/doTTS?text=__TEXT&locale=__LOCALE
-	
+
 See the [[https://forum.sinusbot.com/threads/text-to-speech-apis-for-sinusbot.500|forums]] for a list of providers known to support this kind of URLs.
 
 ## Installing libraries from the Chromium project
@@ -37,7 +37,7 @@ See the [[https://forum.sinusbot.com/threads/text-to-speech-apis-for-sinusbot.50
 
 * Download and install the library and the voices
 
-```
+```bash
 cd /opt/sinusbot/tts
 wget https://chromium.googlesource.com/chromiumos/platform/assets/+archive/master/speech_synthesis/patts.tar.gz
 tar -xzf patts.tar.gz
@@ -49,7 +49,7 @@ If the last command fails, you probably need to install unzip first. On Debian/U
 
 Afterwards, edit your config.ini ato contain the following:
 
-```
+```ini
 [TTS]
 Enabled = true
 

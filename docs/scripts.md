@@ -121,7 +121,7 @@ Current available variable types:
 | array     | this allows the user to add an unspecified amount of items |
 
 Example of the string type usage:
-```
+```javascript
 {
     name: 'ExampleName',
     title: 'message type',
@@ -132,7 +132,7 @@ Example of the string type usage:
 
 Example of the select type usage:
 
-```
+```javascript
 {
     name: 'fooType',
     title: 'Variations of foobar',
@@ -143,7 +143,7 @@ Example of the select type usage:
 
 Example of the condition type with the above options example:
 
-```
+```javascript
 {
     name: 'fooSwitch',
     title: 'Selected fooType',
@@ -157,7 +157,7 @@ Example of the condition type with the above options example:
 
 You can print these values in the log by using:
 
-```
+```javascript
 engine.log(config.ExampleName);
 engine.log(config.fooType);
 ```
@@ -176,16 +176,16 @@ Use this function to setup event listeners and do stuff on initialization.
 
 Example
 
-```
+```javascript
 registerPlugin({
-	...
+    ...
 }, function(sinusbot, config) {
-	var event = require('event');
-	event.on('chat', function(chatEvent) {
-		// Do something...
-	});
+    var event = require('event');
+    event.on('chat', function(chatEvent) {
+        // Do something...
+    });
 });
 ```
-	
+
 As said, the function will get called once the script gets activated either by enabling it in the web interface or when autorun is enabled.
 In this example an event handler is installed that will be called whenever a chat message has been sent.

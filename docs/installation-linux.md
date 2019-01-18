@@ -140,7 +140,7 @@ If you used the startscript check the status by `systemctl status sinusbot.servi
 Either download it directly with `curl -o /lib/systemd/system/sinusbot.service https://raw.githubusercontent.com/SinusBot/linux-startscript/master/sinusbot.service`
 or create a file at `/lib/systemd/system/sinusbot.service` with the following content:
 
-```
+```ini
 [Unit]
 Description=Sinusbot, the Teamspeak 3 and Discord music bot.
 Wants=network-online.target
