@@ -9,3 +9,9 @@
 [data-md-color-accent=red] .md-nav__link:focus, [data-md-color-accent=red] .md-nav__link:hover {
     color: var(--red);
 }
+
+@media only screen and (max-width: 76.1875em) {
+    html [data-md-color-primary=red] .md-nav--primary .md-nav__title--site {
+        background-color: var(--red);
+    }
+}
