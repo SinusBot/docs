@@ -1,6 +1,7 @@
 site_name: SinusBot Documentation
 copyright: 'Copyright &copy; 2019 Michael Friese'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
+favicon: /favicon.ico
 theme:
   name: 'material'
   font: false
@@ -27,16 +28,20 @@ extra:
 nav:
   - 'Introduction': 'index.md'
   - 'Installation':
-    - 'Linux': 'installation-linux.md'
-    - 'Windows': 'installation-windows.md'
-    - 'Docker': 'installation-docker.md'
+    - 'Linux': 'installation/linux.md'
+    - 'Windows': 'installation/windows.md'
+    - 'Docker': 'installation/docker.md'
     - 'youtube-dl': 'youtube-dl.md'
     - 'Reverse Proxy':
-      - 'NGINX': 'reverse-proxy-nginx.md'
-      - 'Apache 2': 'reverse-proxy-apache2.md'
-      - 'Common Adaptations': 'reverse-proxy-common-adaptations.md'
+      - 'NGINX': 'reverse-proxy/nginx.md'
+      - 'Apache 2': 'reverse-proxy/apache2.md'
+      - 'Common Adaptations': 'reverse-proxy/common-adaptations.md'
   - 'Scripting': 'scripts.md'
   - 'Configuration': 'configuration.md'
   - 'Text-to-Speech': 'tts.md'
   - 'Speech Recognition': 'speechrecognition.md'
   - 'Localization': 'locales.md'
+  - 'Frequently Asked Questions':
+    - 'General': 'faq/general.md'
+    - 'Installation': 'faq/installation.md'
+    - 'Features': 'faq/features.md'
