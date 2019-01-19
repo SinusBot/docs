@@ -1,5 +1,5 @@
 site_name: SinusBot Documentation
-copyright: 'Copyright &copy; 2019 Michael Friese'
+copyright: 'Copyright &copy; 2019 The SinusBot Team and Contributors.'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
 favicon: /favicon.ico
 theme:
@@ -27,6 +27,7 @@ extra:
       link: https://forum.sinusbot.com
 nav:
   - 'Introduction': 'index.md'
+  - 'What is new?': 'whatsnew.md'
   - 'Installation':
     - 'Linux': 'installation/linux.md'
     - 'Windows': 'installation/windows.md'
