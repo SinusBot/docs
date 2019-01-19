@@ -1,11 +1,11 @@
 site_name: SinusBot Documentation
 copyright: 'Copyright &copy; 2019 The SinusBot Team and Contributors.'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
-favicon: /favicon.ico
 theme:
   name: 'material'
   font: false
   logo: 'logo.svg'
+  favicon: /favicon.ico
   palette:
     primary: 'red'
     accent: 'red'
