@@ -4,6 +4,7 @@ edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
 theme:
   name: 'material'
   font: false
+  logo: 'logo.svg'
   palette:
     primary: 'red'
     accent: 'red'
