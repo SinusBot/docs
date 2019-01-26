@@ -42,6 +42,7 @@ nav:
   - 'Text-to-Speech': 'tts.md'
   - 'Speech Recognition': 'speechrecognition.md'
   - 'Localization': 'locales.md'
+  - 'Licenses': 'licenses.md'
   - 'Frequently Asked Questions':
     - 'General': 'faq/general.md'
     - 'Installation': 'faq/installation.md'
