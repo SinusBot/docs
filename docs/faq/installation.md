@@ -129,7 +129,7 @@ You should always run any program with the least amount of permissions required.
 
 **So how can I run the bot then?**
 
-Start the bot with another user or [use a startscipt](../installation/linux/#using-a-startscript) to run the bot.
+Start the bot with another user or [use a startscipt](../../installation/linux/#using-a-startscript) to run the bot.
 You'll have to change the ownership of the entire folder to the new user.
 
 ### What does "a manual update is required" mean?

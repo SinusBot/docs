@@ -13,4 +13,4 @@ You can submit changes by editing the [markdown](https://guides.github.com/featu
 To view your changes locally:
 
 1. install [MkDocs](https://www.mkdocs.org/#installation)
-2. run  `mkdocs serve`
+2. run `mkdocs serve`
