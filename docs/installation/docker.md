@@ -2,7 +2,7 @@ Detailed instructions on how to install the sinusbot on docker can be found on t
 
 ```bash
 docker run -d -p 8087:8087 \
-            -v scripts:/opt/sinusbot/scripts \
-            -v data:/opt/sinusbot/data \
-            --name sinusbot sinusbot/docker
+    -v scripts:/opt/sinusbot/scripts \
+    -v data:/opt/sinusbot/data \
+    --name sinusbot sinusbot/docker
 ```

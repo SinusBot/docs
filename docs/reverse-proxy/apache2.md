@@ -77,4 +77,4 @@ Restart apache2:
 
 `systemctl restart apache2`
 
-Now just follow the [common adaptations](reverse-proxy-common-adaptations.md) for reverse proxies.
+Now just follow the [common adaptations](common-adaptations.md) for reverse proxies.

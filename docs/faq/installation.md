@@ -1,6 +1,6 @@
 ### When will feature X be implemented?
 
-There will be **no ETAs** (estimated time of arrival) on any feature. It’s done when it’s done, please don’t ask.
+There will be **no ETA** (estimated time of arrival) on any feature. It’s done when it’s done, please don’t ask.
 
 ### What is the default username and password?
 
@@ -10,15 +10,14 @@ Double click the SinusBot logo in the tray (next to your clock at the bottom rig
 
 #### Linux
 
-Newer releases (0.9.12+) will have **a randomly generated password** which will be displayed on first run. Those versions can have their password overridden by running the bot via
+The bot will initially have a **randomly generated password** which is displayed on first run. You can temprorarily override the password by starting the bot via
 
-```
+```bash
+# make sure to run this as the sinusbot user and NOT as root!
 ./sinusbot --override-password=newpassword
 ```
 
-(make sure to run as the correct system user). Login as admin with the specified password (newpassword in the example above) and change your password to a new one. Afterwards restart the bot without the pwreset parameter.
-
-For older versions there is no option to reset the password; the only options are to either upgrade or to delete the data-folder which will fully reset the bot.
+Login as admin with the specified password (`newpassword` in the example above) and change your password to a new one. Afterwards restart the bot *without* the `--override-password` parameter.
 
 ### Is there a version for 32bit Windows / Linux?
 
@@ -35,9 +34,9 @@ Probably. I’ve heard of people running the bot on ArchLinux, CentOS, Fedora an
 
 ### When trying to download the bot, I get errors about SSL. Why and how to fix that?
 
-The whole website now runs on SSL which is far more secure when it comes to software you want to install on your server. However, some linux distributions only have outdated root certificates and those of cloudflare are missing. You can try to upate them via sudo update-ca-certificates on debian/ubuntu.
+The whole website now runs on SSL which is far more secure when it comes to software you want to install on your server. However, some linux distributions only have outdated root certificates and those of cloudflare are missing. You can try to upate them via `sudo update-ca-certificates` on debian/ubuntu.
 
-Otherwise, you can try to use `curl -O https://......`
+Otherwise, you can try to use `curl -O https://...`
 
 ### When I start the bot from the webinterface, it doesn’t work. It says something about “TS quit” in the log
 
@@ -45,15 +44,14 @@ This can have many reasons. It means that the TeamSpeak client is unable to run 
 
 Here's a quick checklist:
 
-- does your server have enough RAM? At least 200 MB are recommended?
+- does your server have enough RAM? (at least 300 MB are recommended)
 - did you follow the installation guide thoroughly and installed all required dependencies?
 - do you run the bot on an officially supported OS? Windows, Debian, Ubuntu are officially supported.
 - did you try setting the locale manually like it says in the "Troubleshooting" section of the installation guide?
 - did you copy the plugin like it says in the documentation?
-- make sure the server exists at the given location
+- make sure the server ip/adress is correct
 - make sure your client is up to date since older versions might be blocked
 - make sure the security level is lower or equal to the clients identity level
-
 
 ### My bot is starting up but playback is not possible / I hear strange things / …! Why?
 
@@ -63,14 +61,13 @@ Make sure you copied the plugin like said in the documentation.
 
 Increase the bots’ priority and also that of the client instances it uses. You can do that within the task manager.
 You can also try to decrease the setting SampleInterval, adjusting it to
-SampleInterval = 40
-in your config.ini.
+SampleInterval = 40 in your config.ini.
 
 ### Someone told me to fix the file permissions. How do I do that?
 
 Given your bot has been installed in `/opt/sinusbot` and you've added a user sinusbot with the group sinusbot as well, run the following command with root permissions:
 
-```
+```bash
 chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
@@ -101,16 +98,6 @@ update-locale LANG=en_US.UTF-8
 reboot
 ```
 
-### What are the requirements for youtube-dl on Linux?
-
-In order to use Youtube-DL on Linux you need Python (Version 2.6, 2.7, 3.3 or later) and optionally the libav-tools.
-
-On Ubuntu / Debian, these packages can be installed as root via:
-
-```
-apt-get install python libav-tools
-```
-
 ### I get an error when starting: Updating database to v7... 6 / Error on database operations: there is already another table or index with this name:
 
 This is a bug in the database upgrade process which happens when you upgrade from <= 0.9.9 to a newer version, go back to <= 0.9.9 and then try to upgrade again (or more likely: when starting the bot via ./ts3bot, even when the newer version ./sinusbot is installed).
@@ -136,11 +123,13 @@ Remove the file with rm /tmp/.sinusbot.lock and make sure not to run the bot as 
 
 ### Why can't I run the bot as root?
 
-The parameter `-RunningAsRootIsEvilAndIKnowThat` has been disabled as running the bot with the root user is a potential security risk and is generally considered bad practice.
+Unnecessarily running software with the root user is a potential security risk and is generally considered bad practice.
+
 You should always run any program with the least amount of permissions required.
 
 **So how can I run the bot then?**
-Start the bot with another user or use a startscipt to run the bot.
+
+Start the bot with another user or [use a startscipt](../installation/linux/#using-a-startscript) to run the bot.
 You'll have to change the ownership of the entire folder to the new user.
 
 ### What does "a manual update is required" mean?

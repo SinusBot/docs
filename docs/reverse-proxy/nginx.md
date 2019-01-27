@@ -80,4 +80,4 @@ Reload nginx:
 
 `nginx -s reload`
 
-Now just follow the [common adaptations](reverse-proxy-common-adaptations.md) for reverse proxies.
+Now just follow the [common adaptations](common-adaptations.md) for reverse proxies.

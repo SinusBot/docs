@@ -1,6 +1,6 @@
 # Licenses
 
-So you own a large server and two instances are not enough for you? For this case we're handing out free extended licenses which come with 4 more instances by default, so you've got a total of 6. __Licenses are currently only available for the Linux version of the bot.__
+So you own a large server and two instances are not enough for you? For this case we're handing out free extended licenses which come with 4 more instances by default, so you've got a total of 6. **Licenses are currently only available for the Linux version of the bot.**
 
 ## How to get a free extended license?
 

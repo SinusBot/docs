@@ -8,7 +8,6 @@ The language the scripts have to be in is JavaScript (ECMAScript Version 5). Sin
 
 The full API documentation of the API that is available to you can be found [here](https://sinusbot.github.io/scripting-docs/).
 
-
 ## How to install a script?
 
 When you download scripts manually, you should get files that end with .js. Copy those files into the scripts folder within the installation directory.
@@ -19,13 +18,11 @@ Should you have downloaded a zip/rar or whatever file, make sure to unpack it fi
 
 > Some scripts also come with more files than just the main script file. In such cases make sure you copy them exactly in the same structure as you've downloaded them (keeping all folders that came with the script). This is usually true for scripts that come with their own web interface.
 
-
 ## Writing a script
 
 So you've searched for a script and found nothing that fully suits you, right? The best way to get started with writing a script is usually to have a look at other scripts first and try to understand how they work. If you for example want to have a custom welcome script, have a look at how the existing ones work and make slight adjustments instead of directly writing it from scratch.
 
 > The source code of scripts should usually be readable so you can extend / modify them. Should you plan to publish changes to another script however, make sure you contact the original author and ask for permission.
-
 
 ## Writing a script from scratch
 
@@ -43,7 +40,7 @@ registerPlugin({
     name: 'Demo Script',
     version: '1.0',
     description: 'This example actually does nothing',
-    author: 'Sinus Bot <bot@sinusbot.com>',
+    author: 'your name <your-email@example.com>',
     vars: [],
     autorun: true
 }, function(sinusbot, config) {
@@ -59,8 +56,7 @@ The name field should contain a short name of your script.
 
 ##### author (string)
 
-Put your name and your email address in here in the form of "your name 
-<your-email@example.com\>"
+Put your name and your email address in here in the form of `your name <your-email@example.com>`
 
 ##### description (string)
 
