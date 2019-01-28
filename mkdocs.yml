@@ -1,4 +1,5 @@
 site_name: SinusBot Documentation
+site_url: https://sinusbot.github.io/docs/
 copyright: 'Copyright &copy; 2019 The SinusBot Team and Contributors.'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
 nav:
