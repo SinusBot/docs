@@ -28,7 +28,7 @@ theme:
   name: 'material'
   font: false
   logo: 'logo.svg'
-  favicon: /favicon.ico
+  favicon: 'https://sinusbot.github.io/favicon.ico'
   palette:
     primary: 'red'
     accent: 'red'
