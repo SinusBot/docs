@@ -1,6 +1,6 @@
 Download and install the latest 64-Bit [TeamSpeak 3 Client](https://teamspeak.com/en/downloads/) for Windows.
 
-Download the [SinusBot Installer for Windows](https://www.sinusbot.com/pre/sinusbot-0.13.37.exe) and start it.
+Download the [SinusBot Installer for Windows](https://www.sinusbot.com/#download) and start it.
 
 Be sure that "TeamSpeak 3 Support" is checked.
 
