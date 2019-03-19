@@ -47,9 +47,11 @@ When you upload files to the bot, they will be analyzed, indexed and stored in t
 
 If you want to use FTP to manage your files, you can use the `ExternalFileBase` setting in your config.ini to point to a directory where the files are stored. The bot will pick them up automatically.
 
-### Will there be a Mac (OSX) Version?
+### Will there be a macOS Version?
 
-Probably not, sorry.
+Probably not directly, sorry.
+
+As a workaround you can currently use the [Docker image](https://hub.docker.com/r/sinusbot/docker), but that requires knowledge of Docker and the command line.
 
 ### How do I get a license?
 
