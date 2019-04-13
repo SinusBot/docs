@@ -19,7 +19,7 @@ If you face an issue, make sure you have the [Microsoft Visual C++ 2010 Redistri
 Run the following commands but make sure to adjust the path to match your SinusBot installation:
 
 ```bash
-sudo apt-get update && sudo apt-get install python libav-tools
+sudo apt-get update && sudo apt-get install python
 cd /opt/sinusbot/
 curl -L -O https://yt-dl.org/downloads/latest/youtube-dl
 chmod a+rx youtube-dl
