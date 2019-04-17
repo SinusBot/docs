@@ -65,8 +65,7 @@ This section will hold configuration values for used plugins. Please see the man
 | Field              | Value                                                                          | Default                    |
 | ------------------ | ------------------------------------------------------------------------------ | -------------------------- |
 | AllowReload        | Enables a script function that allows hot script reloading (added scripts will still need a restart of the bot) |
-| EnableTimer        | Enable the timer event (disabled by default); deprecated, will get removed soon |
-| WatchScripts       | An array of script files that should automatically be reloaded if a change is detected; very useful for script developers; AllowReload needs to be enabled |
+| DevMode            | If set to true (default is false), all scripts will be reloaded once a script file gets changed. |
 
 ### SpeechRecognition
 
