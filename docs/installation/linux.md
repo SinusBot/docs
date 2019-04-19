@@ -4,7 +4,7 @@ Let's start by installing several dependencies:
 
 ```bash
 apt-get update
-apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1-mesa x11-xkb-utils libasound2
+apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1-mesa x11-xkb-utils libasound2 curl
 update-ca-certificates
 ```
 
@@ -69,9 +69,9 @@ cp config.ini.dist config.ini
 Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
-wget http://dl.4players.de/ts/releases/3.2.3/TeamSpeak3-Client-linux_amd64-3.2.3.run
-chmod 0755 TeamSpeak3-Client-linux_amd64-3.2.3.run
-./TeamSpeak3-Client-linux_amd64-3.2.3.run
+wget http://dl.4players.de/ts/releases/3.2.5/TeamSpeak3-Client-linux_amd64-3.2.5.run
+chmod 0755 TeamSpeak3-Client-linux_amd64-3.2.5.run
+./TeamSpeak3-Client-linux_amd64-3.2.5.run
 ```
 
 You will need to accept the terms.
@@ -85,7 +85,7 @@ nano config.ini
 
 Make sure that the TS3Path is correct (if you followed this tutorial step by step, it should already match):
 
-```
+```toml
 TS3Path = "/opt/sinusbot/TeamSpeak3-Client-linux_amd64/ts3client_linux_amd64"
 ```
 
@@ -179,45 +179,21 @@ If you used the startscript check the status by `systemctl status sinusbot.servi
 
 ## Using a startscript
 
-(This instructions needs to be done using the `root` user.)  
-Either download it directly with
+*These instructions need to be done as the `root` user.*
+
+Download the startscript:
 
 ```bash
 curl -o /lib/systemd/system/sinusbot.service https://raw.githubusercontent.com/SinusBot/linux-startscript/master/sinusbot.service
 ```
 
-or create a file at `/lib/systemd/system/sinusbot.service` with the following content:
-
-```toml
-[Unit]
-Description=Sinusbot, the Teamspeak 3 and Discord music bot.
-Wants=network-online.target
-After=syslog.target network.target network-online.target
-
-[Service]
-User=YOUR_USER
-ExecStartPre=/bin/rm -f /tmp/.sinusbot.lock
-ExecStopPost=/bin/rm -f /tmp/.sinusbot.lock
-ExecStart=YOUR_PATH_TO_THE_BOT_BINARY
-WorkingDirectory=YOUR_PATH_TO_THE_BOT
-Type=simple
-KillSignal=2
-SendSIGKILL=yes
-Environment=QT_XCB_GL_INTEGRATION=none
-LimitNOFILE=512000
-LimitNPROC=512000
-
-[Install]
-WantedBy=multi-user.target
-```
-
-Adjust the following placeholders to your installation:
+And adjust the following placeholders to your installation:
 
 | placeholder                      | description                                 | example                |
-| --- | --- | --- |
+| -------------------------------- | ------------------------------------------- | ---------------------- |
 | YOUR\_USER                       | Your user who starts the bot                | sinusbot               |
 | YOUR\_PATH\_TO\_THE\_BOT\_BINARY | Your path to the SinusBot binary            | /opt/sinusbot/sinusbot |
-| YOUR\_PATH\_TO\_THE\_BOT          | Your path to the SinusBot install directory | /opt/sinusbot          |
+| YOUR\_PATH\_TO\_THE\_BOT         | Your path to the SinusBot install directory | /opt/sinusbot          |
 
 Reload systemd: `systemctl daemon-reload`
 
@@ -228,3 +204,4 @@ Start the sinusbot: `systemctl start sinusbot`
 ----
 
 [github.com/SinusBot/linux-startscript](https://github.com/SinusBot/linux-startscript)
+[github.com/SinusBot/installer-linux](https://github.com/SinusBot/installer-linux)
