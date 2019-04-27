@@ -15,6 +15,8 @@ The bot should detect it automatically and commands like `!yt`, `!ytdl`, etc. sh
 
 If you face an issue, make sure you have the [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/en-US/download/details.aspx?id=5555) installed.
 
+You should also try updating youtube-dl by redownloading it as described above.
+
 ## Linux
 
 Run the following commands but make sure to adjust the path to match your SinusBot installation:
