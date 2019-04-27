@@ -4,6 +4,7 @@ The bot can use [youtube-dl](https://rg3.github.io/youtube-dl/) to download medi
 
 ## Windows
 
+- Install the [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/en-US/download/details.aspx?id=5555) if it isn't installed already
 - Download [youtube-dl.exe](https://yt-dl.org/downloads/latest/youtube-dl.exe)
 - Save it in the bot directory (same folder the sinusbot.exe is in, for example in `C:\SinusBot\` - depending on where you installed it)
 - Restart the bot
