@@ -22,8 +22,15 @@ A license will also be valid for at least a major release (e.g. 2.0 could requir
 
 ## How do I install the license?
 
-Once you've received a license you just have to download the `private.dat` file from the license page and save/copy it into the same folder the bot is installed in.
-After restarting it new instances should appear automatically.
+Once you've received a license you just have to download the `private.dat` file from the license page and save/copy it into the same folder the bot is installed in (normally that should be in `/opt/sinusbot/`).
+After restarting the sinusbot the new instances will appear automatically.
+
+If no instances appear afterwards then you did something wrong.
+Make sure that...
+
+- `private.dat` is in the directory where the sinusbot is installed (typically `/opt/sinusbot/` if you followed our guide or used the installer)
+- `private.dat` is owned and readable by the sinusbot user (`chown sinusbot:sinusbot private.dat`)
+- `private.dat` was uploaded correctly 
 
 ## Disclaimer
 
