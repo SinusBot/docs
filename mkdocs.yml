@@ -4,6 +4,10 @@ copyright: 'Copyright &copy; 2019 The SinusBot Team and Contributors.'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
 nav:
   - 'Introduction': 'index.md'
+  - 'FAQ':
+    - 'General': 'faq/general.md'
+    - 'Installation': 'faq/installation.md'
+    - 'Features': 'faq/features.md'
   - 'What is new?': 'whatsnew.md'
   - 'Installation':
     - 'Linux': 'installation/linux.md'
@@ -20,10 +24,6 @@ nav:
   - 'Speech Recognition': 'speechrecognition.md'
   - 'Localization': 'locales.md'
   - 'Licenses': 'licenses.md'
-  - 'Frequently Asked Questions':
-    - 'General': 'faq/general.md'
-    - 'Installation': 'faq/installation.md'
-    - 'Features': 'faq/features.md'
 theme:
   name: 'material'
   font: false
@@ -32,8 +32,14 @@ theme:
   palette:
     primary: 'red'
     accent: 'red'
-markdown_extensions:
+markdown_extensions: # see https://python-markdown.github.io/extensions/, https://facelessuser.github.io/pymdown-extensions/
   - codehilite
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.keys
+  - toc:
+      permalink: "\ue157"
 extra_css:
   - extra.css
 extra:

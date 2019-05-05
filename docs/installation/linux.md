@@ -89,7 +89,7 @@ Make sure that the TS3Path is correct (if you followed this tutorial step by ste
 TS3Path = "/opt/sinusbot/TeamSpeak3-Client-linux_amd64/ts3client_linux_amd64"
 ```
 
-Close the editor (Ctrl+O, Enter, Ctrl+X).
+Close the editor (++ctrl+o++, ++enter++, ++ctrl+x++).
 
 Remove the file 'libqxcb-glx-integration.so' from the clients 'xcbglintegrations' directory:
 
@@ -149,11 +149,7 @@ Starting the bot
 ./sinusbot
 ```
 
-Stopping the bot
-
-```bash
-Ctrl + C
-```
+Stopping the bot with ++ctrl+c++
 
 **If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using_a_startscript).**
 
@@ -187,13 +183,19 @@ Download the startscript:
 curl -o /lib/systemd/system/sinusbot.service https://raw.githubusercontent.com/SinusBot/linux-startscript/master/sinusbot.service
 ```
 
+Then edit the file:
+
+```bash
+nano /lib/systemd/system/sinusbot.service
+```
+
 And adjust the following placeholders to your installation:
 
 | placeholder                      | description                                 | example                |
 | -------------------------------- | ------------------------------------------- | ---------------------- |
 | YOUR\_USER                       | Your user who starts the bot                | sinusbot               |
-| YOUR\_PATH\_TO\_THE\_BOT\_BINARY | Your path to the SinusBot binary            | /opt/sinusbot/sinusbot |
-| YOUR\_PATH\_TO\_THE\_BOT         | Your path to the SinusBot install directory | /opt/sinusbot          |
+| YOURPATH\_TO\_THE\_BOT\_BINARY | Your path to the SinusBot binary            | /opt/sinusbot/sinusbot |
+| YOURPATH\_TO\_THE\_BOT         | Your path to the SinusBot install directory | /opt/sinusbot          |
 
 Reload systemd: `systemctl daemon-reload`
 

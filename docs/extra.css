@@ -15,3 +15,8 @@
         background-color: var(--red);
     }
 }
+
+.md-typeset .headerlink {
+	font: normal 400 2rem "Material Icons";
+	vertical-align: middle;
+}
