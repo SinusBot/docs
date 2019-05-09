@@ -17,6 +17,11 @@
     Automatic logins can be created from other webinterfaces and the whole frontend API is open, well documented and accessible for further customization / integration.
     If you're a serious hosting company and want to do some stress testing, please contact me to get a demo-license that will help you do so.
 
+### Where can I find the version of the installed SinusBot?
+
+!!! success ""
+    If the bot is already running, open up the web interface and go to **Settings** > **Info** > **About**. If the bot is not running, you can start it with `./sinusbot -v` on your command line and it will display the version information there.
+
 ### Is sponsoring allowed? { #sponsoring}
 
 !!! success ""
