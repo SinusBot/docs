@@ -13,15 +13,26 @@ The default username is `admin`.
 ???+ info "Linux"
     The bot will initially have a **randomly generated password** which is **displayed on first run** in the console. The sinusbot installer will also print the password at the end of the installation.
 
-    You can temprorarily override the password by folling these steps:
+    Unexperienced users should use the sinusbot-installer script to reset the password.
+
+    More experienced users can temprorarily override the password and change it by folling these steps:
 
     1. Stop the sinusbot (ie. `service sinusbot stop`)
     2. Start the sinusbot with the `--override-password=newpassword` flag as the sinusbot user:
         - login as the sinusbot user: `su sinusbot`
         - start the sinusbot: `./sinusbot --override-password=newpassword` (**don't** do this as root!)
     3. Login as `admin` with the specified password (ie. `newpassword`) and change your password to a new one.
-    4. Stop the sinusbot ++ctrl+c++
+    4. Stop the sinusbot: ++ctrl+c++
     5. Afterwards restart the sinusbot *without* the `--override-password` parameter. (ie. `service sinusbot start`)
+
+    If the sinusbot doesn't start afterwards and you get something like
+
+        Job for sinusbot.service failed because the control process exited with error code.
+        See "systemctl status sinusbot.service" and "journalctl -xe" for details.
+
+    then you did something wrong, such as: starting the bot as root or not stopping the bot, ...
+
+    Look at the sinusbot log (as it says) with `systemctl status sinusbot.service -o cat --no-pager` and search for a solution on this FAQ page or in the forum.
 
 ### Is there a version for 32bit Windows / Linux? { #32bit data-toc-label='Is there a 32bit version?' }
 
