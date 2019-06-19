@@ -38,6 +38,8 @@ markdown_extensions: # see https://python-markdown.github.io/extensions/, https:
   - attr_list
   - pymdownx.details
   - pymdownx.keys
+  - pymdownx.tilde
+  - pymdownx.mark
   - toc:
       permalink: "\ue157"
 extra_css:
