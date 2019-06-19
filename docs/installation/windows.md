@@ -1,5 +1,5 @@
 1. ~~Download and install the latest **64-Bit** [TeamSpeak 3 Client](https://teamspeak.com/en/downloads/) for Windows.~~
-    (*The TeamSpeak Client 3.3.0 is not supported yet, for now you need to install the previous release (3.2.5) liked in the next line*)
+    (*The TeamSpeak Client 3.3.0 is not supported yet, for now you need to install the previous release (3.2.5) linked in the next line*)
 
     Download the [TeamSpeak Client 3.2.5](https://files.teamspeak-services.com/releases/client/3.2.5/TeamSpeak3-Client-win64-3.2.5.exe).
 
