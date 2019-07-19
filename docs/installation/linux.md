@@ -71,9 +71,9 @@ cp config.ini.dist config.ini
 Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
-wget http://dl.4players.de/ts/releases/3.2.5/TeamSpeak3-Client-linux_amd64-3.2.5.run
-chmod 0755 TeamSpeak3-Client-linux_amd64-3.2.5.run
-./TeamSpeak3-Client-linux_amd64-3.2.5.run
+wget http://dl.4players.de/ts/releases/3.3.0/TeamSpeak3-Client-linux_amd64-3.3.0.run
+chmod 0755 TeamSpeak3-Client-linux_amd64-3.3.0.run
+./TeamSpeak3-Client-linux_amd64-3.3.0.run
 ```
 
 You will need to accept the terms.
