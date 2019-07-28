@@ -1,5 +1,16 @@
 **If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the [Install Script](https://forum.sinusbot.com/resources/sinusbot-installer-script.58/).**
 
+### Compatible Versions
+
+SinusBot Version | TS3 Version  | Linux Kernel Version
+-----------------|--------------|-------------------------
+1.0.0-beta4      | 3.3          | 3.17+
+1.0.0-beta3      | 3.3          | 3.17+
+1.0.0-beta2      | 3.2.5        | 2.6+
+1.0.0-beta1      | 3.2.5        | 2.6+
+
+### Manual installation
+
 Let's start by installing several dependencies:
 
 TS3.3+ requires at least a Linux Kernel of version 3.17 or higher!
