@@ -1,4 +1,4 @@
-**If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the [Install Script](https://forum.sinusbot.com/resources/sinusbot-installer-script.58/).**
+**If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the [Installer Script](https://forum.sinusbot.com/resources/sinusbot-installer-script.58/).**
 
 ### Compatible Versions
 
@@ -82,7 +82,7 @@ cp config.ini.dist config.ini
 Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
-wget http://dl.4players.de/ts/releases/3.3.0/TeamSpeak3-Client-linux_amd64-3.3.0.run
+wget https://files.teamspeak-services.com/releases/client/3.3.0/TeamSpeak3-Client-linux_amd64-3.3.0.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-3.3.0.run
 ./TeamSpeak3-Client-linux_amd64-3.3.0.run
 ```
@@ -150,7 +150,7 @@ rm TeamSpeak3-Client-linux_amd64/xcbglintegrations/libqxcb-glx-integration.so
 
 ### Usage
 
-As [the bot won't run as root](https://forum.sinusbot.com/kb/why-cant-i-run-the-bot-as-root.201) you will need to switch to the user that you have installed the bot on, if you followed the tutorial, this will be 'sinusbot". To do this use the following command:
+As [the bot won't run as root](https://sinusbot.github.io/docs/faq/installation/#why-cant-i-run-the-bot-as-root) you will need to switch to the user that you have installed the bot on, if you followed the tutorial, this will be 'sinusbot". To do this use the following command:
 
 ```bash
 su sinusbot
@@ -166,25 +166,16 @@ Stopping the bot with ++ctrl+c++
 
 **If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using_a_startscript).**
 
-Now login at `http://<your ip>:8087/` with user **admin** and the password provided on first run. (see [FAQ](https://forum.sinusbot.com/faq/what-is-the-default-username-and-password.2/) on how to reset)
+Now login at `http://<your ip>:8087/` with user **admin** and the password provided on first run. (see [FAQ](https://sinusbot.github.io/docs/faq/installation/#what-is-the-default-username-and-password) on how to reset)
 
 ## Troubleshooting
 
-If the bot doesn't connect and you only see a "INFO TSClient quit" every time you try to start the bot **via the webinterface**, you might need to set your locale info manually when starting up the bot. Try to start it with
+Look for any errors in the sinusbot/instance log and try to look-up solutions on our forum or your favourite search engine.
 
-```bash
-LC_ALL="en_US.UTF-8" ./sinusbot
-```
+If you ask us or our community for help then please provide all of the information mentioned in [READ ME BEFORE YOU POST](https://forum.sinusbot.com/threads/read-me-before-you-post.115/) and also the output of the [diag script](https://forum.sinusbot.com/threads/diagsinusbot-sh-sinusbot-diagnostic-script.831/).
 
-Exchange **en_US.UTF-8** to whatever locale you're using.
-
-If that still doesn't help, try to manually start a TS client instance and see if that reports something useful:
-
-```bash
-xinit /opt/sinusbot/TeamSpeak3-Client-linux_amd64/ts3client_linux_amd64 -- /usr/bin/Xvfb :1 -screen 0 800x600x16 -ac
-```
-
-If you used the startscript check the status by `systemctl status sinusbot.service`. Other logs from the stdout you can see by using `journalctl -u sinusbot.service --since "1 hour ago"`.
+If you used the startscript you can check the status with `systemctl status sinusbot.service`.
+Logs can be viewed using `journalctl -u sinusbot.service -f --since "1 hour ago"`.
 
 ## Using a startscript
 
@@ -202,11 +193,11 @@ Then edit the file:
 nano /lib/systemd/system/sinusbot.service
 ```
 
-And adjust the following placeholders to your installation:
+And replace the following placeholders to match your installation:
 
-| placeholder                      | description                                 | example                |
-| -------------------------------- | ------------------------------------------- | ---------------------- |
-| YOUR\_USER                       | Your user who starts the bot                | sinusbot               |
+| placeholder                    | description                                 | example                |
+| ------------------------------ | ------------------------------------------- | ---------------------- |
+| YOUR\_USER                     | Your user who starts the bot                | sinusbot               |
 | YOURPATH\_TO\_THE\_BOT\_BINARY | Your path to the SinusBot binary            | /opt/sinusbot/sinusbot |
 | YOURPATH\_TO\_THE\_BOT         | Your path to the SinusBot install directory | /opt/sinusbot          |
 
@@ -218,5 +209,5 @@ Start the sinusbot: `systemctl start sinusbot`
 
 ----
 
-[github.com/SinusBot/linux-startscript](https://github.com/SinusBot/linux-startscript)
-[github.com/SinusBot/installer-linux](https://github.com/SinusBot/installer-linux)
+Startscript: [github.com/SinusBot/linux-startscript](https://github.com/SinusBot/linux-startscript)
+Linux-Installer: [github.com/SinusBot/installer-linux](https://github.com/SinusBot/installer-linux)
