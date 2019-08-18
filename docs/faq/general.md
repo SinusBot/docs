@@ -6,7 +6,9 @@
 ### Where and how to get the hosting version? I want to sell the bot! { #commercial-use data-toc-label='Commercial Use?' }
 
 !!! success ""
-    The hosting version is **not publicly available** and won't be before version 1.0. If you are interested in hosting a huge amount of bots (I'm talking 200+ here), feel free to contact [@flyth](https://forum.sinusbot.com/members/flyth.2/) on the forums. The hosting version will not become generally available to everyone anytime soon.
+    The SinusBot software is free for personal use only. If you want to use it commercially, please contact the author.
+
+    The hosting version is **not publicly available**. If you are interested in hosting a huge amount of bots (I'm talking 200+ here), feel free to contact [@flyth](https://forum.sinusbot.com/members/flyth.2/) on the forums. The hosting version will not become generally available to everyone anytime soon.
 
     Please refrain from messages like "I'm thinking of starting a business...", "I want to sell the bot, but my website is not yet ready" or such and come back, if you seriously want to apply as a hosting partner and have the proper audience for that. :)
 
@@ -17,15 +19,15 @@
     Automatic logins can be created from other webinterfaces and the whole frontend API is open, well documented and accessible for further customization / integration.
     If you're a serious hosting company and want to do some stress testing, please contact me to get a demo-license that will help you do so.
 
-### Where can I find the version of the installed SinusBot?
-
-!!! success ""
-    If the bot is already running, open up the web interface and go to **Settings** > **Info** > **About**. If the bot is not running, you can start it with `./sinusbot -v` on your command line and it will display the version information there.
-
 ### Is sponsoring allowed? { #sponsoring}
 
 !!! success ""
     Sponsoring the SinusBot is currently not allowed without prior written permission of the author.
+
+### Where can I find the version of my SinusBot?  { #what-is-my-version}
+
+!!! success ""
+    If the bot is already running, open up the web interface and go to **Settings** > **Info** > **About**. If the bot is not running, you can start it with `./sinusbot -v` on your command line and it will display the version information there.
 
 ### My bot eats a lot of RAM. Why? { #high-ram-usage data-toc-label='High RAM Usage?' }
 
