@@ -1,16 +1,19 @@
 # Speech Recognition
 
-This is a little tutorial on how to use speech recognition. The feature is still highly experimental and will cause increased CPU & RAM usage. I've tried to make it so it only activates if it is really necessary.
+!!! warning "Speech Recognition is not very reliable and currently only works on TeamSpeak."
+
+This is a little tutorial on how to use speech recognition. The feature is still **highly experimental** and will cause increased CPU & RAM usage. I've tried to make it so it only activates if it is really necessary.
 
 [Discuss this feature on the forums.](https://forum.sinusbot.com/threads/using-speech-recognition.1693/)
 
 ## Requirements
 
-* you need at least version 0.13.37
+* you need at least SinusBot version 0.13.37
 * you will need to provide the commands that should be recognized beforehand for now
 * there is no continuous recognition
 * only 3 speakers will be recognized simultaneously, additional speakers will be ignored until one of the initial 3 speakers will stop speaking; in most cases that is more than enough
 * speech recognition will only work on licensed instances for now
+* TS3 only
 
 ## Preparation
 
