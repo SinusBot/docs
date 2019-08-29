@@ -162,7 +162,7 @@ engine.log(config.fooType);
 
 This parameter is only used for the speech recognition feature and may contain one or more strings that are to be detected for the given script.
 Note that the speech recognition only works with licensed instances.
-You can find more details on how to use it [here](speechrecognition).
+You can find more details on how to use it [here](../speechrecognition).
 
 ### The Setup-Function
 
