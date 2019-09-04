@@ -15,7 +15,7 @@ TS3.3+ requires at least a Linux Kernel of version 3.17 or higher!
 
 ```bash
 apt-get update
-apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1-mesa x11-xkb-utils libasound2 libpci3 libxslt1.1 libxkbcommon0 curl
+apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1-mesa x11-xkb-utils libasound2 libpci3 libxslt1.1 libxkbcommon0 libxss1 curl
 update-ca-certificates
 ```
 
