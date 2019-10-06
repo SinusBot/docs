@@ -1,17 +1,34 @@
-**If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the [Installer Script](https://forum.sinusbot.com/resources/sinusbot-installer-script.58/).**
+## Requirements
 
-### Compatible Versions
+Make sure that your OS (Operating System) is up-to-date.
+We recommend recent LTS releases such as **Ubuntu 18.04** or **Debian 10** (buster), minimal reqired versions:
 
-SinusBot Version                      | TS3 Version  | Linux Kernel Version
---------------------------------------|--------------|---------------------
-1.0.0-beta6, 1.0.0-beta5, 1.0.0-beta4, 1.0.0-beta3 | 3.3          | 3.17+
-1.0.0-beta2, 1.0.0-beta1              | 3.2.5        | 2.6+
+- Debian 8+
+- Ubuntu 16.10+
+- CentOS 7+
 
-### Manual installation
+The server should have *at least* 512MB or 1GB of free RAM.
+Although the SinusBot itself doesn't require much RAM, the TeamSpeak Client(s) often take up the most memory.
+
+Make sure that the server has enough free disk space to fit your needs.
+
+#### Compatible Versions
+
+SinusBot Version              | TS3 Version  | Linux Kernel Version
+------------------------------|--------------|---------------------
+1.0.0-beta6, ..., 1.0.0-beta3 | 3.3+         | 3.17+
+1.0.0-beta2, 1.0.0-beta1      | 3.2.5        | 2.6+
+
+## Installer Script
+
+If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the [Installer Script](https://forum.sinusbot.com/resources/sinusbot-installer-script.58/).
+
+## Manual installation
+
+!!! Warning "The TeamSpeak Client 3.3+ requires at least a Linux Kernel of version 3.17 or higher!"
+    You can check your Linux Kernel version with `uname -a`.
 
 Let's start by installing several dependencies:
-
-TS3.3+ requires at least a Linux Kernel of version 3.17 or higher!
 
 ```bash
 apt-get update
@@ -19,7 +36,7 @@ apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1
 update-ca-certificates
 ```
 
-On Debian and some Ubuntu versions you might as well have to install, so at least try
+On Debian and some Ubuntu versions you might as well have to install, so at least try:
 
 ```bash
 apt-get install libglib2.0-0
@@ -45,8 +62,10 @@ This created user is used to start the bot with usual user privileges (which is 
 Next we will create and prepare the folder where Sinusbot will be installed to, by issuing following commands as the root user:
 
 ```bash
-mkdir -p /opt/sinusbot # create folder
-chown -R sinusbot:sinusbot /opt/sinusbot # grant sinusbot user permissions on specified folder
+# create folder
+mkdir -p /opt/sinusbot
+# grant sinusbot user permissions on specified folder
+chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
 (If you're using another user/group than "sinusbot", replace sinusbot:sinusbot with **yourusername:yourusergroup**)
@@ -80,13 +99,16 @@ cp config.ini.dist config.ini
 Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
-wget https://files.teamspeak-services.com/releases/client/3.3.0/TeamSpeak3-Client-linux_amd64-3.3.0.run
-chmod 0755 TeamSpeak3-Client-linux_amd64-3.3.0.run
-./TeamSpeak3-Client-linux_amd64-3.3.0.run
+# set the current/supported TS3 version here
+VERSION="3.3.2"
+wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
+chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
+./TeamSpeak3-Client-linux_amd64-$VERSION.run
 ```
 
-You will need to accept the terms.
-You do this by pressing enter to scroll through the text or press q to simply go to the end.
+You will need to accept the terms by pressing: ++enter++, ++q++, ++y++, ++enter++.
+
+Afterwards you can delete the file: `rm TeamSpeak3-Client-linux_amd64-$VERSION.run`
 
 Now you need to configure the ini-File of the bot to match your directories.
 
@@ -126,26 +148,6 @@ Just to make sure that the bot is executable, enter
 chmod 755 sinusbot
 ```
 
-### Update
-
-(This instructions needs to be done using the sinusbot user.)
-
-Make sure you're using the latest version:
-
-```bash
-cd /opt/sinusbot
-wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
-tar -xjvf sinusbot.current.tar.bz2
-cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
-```
-
-If you are updating from `3.X` to `3.1.X` then you need to remove the `data/ts3` directory and the `libqxcb-glx-integration.so` file as well:
-
-```bash
-rm -rf data/ts3
-rm TeamSpeak3-Client-linux_amd64/xcbglintegrations/libqxcb-glx-integration.so
-```
-
 ### Usage
 
 As [the bot won't run as root](https://sinusbot.github.io/docs/faq/installation/#why-cant-i-run-the-bot-as-root) you will need to switch to the user that you have installed the bot on, if you followed the tutorial, this will be 'sinusbot". To do this use the following command:
@@ -162,20 +164,11 @@ Starting the bot
 
 Stopping the bot with ++ctrl+c++
 
-**If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using_a_startscript).**
+!!! Info "If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using_a_startscript)."
 
 Now login at `http://<your ip>:8087/` with user **admin** and the password provided on first run. (see [FAQ](https://sinusbot.github.io/docs/faq/installation/#what-is-the-default-username-and-password) on how to reset)
 
-## Troubleshooting
-
-Look for any errors in the sinusbot/instance log and try to look-up solutions on our forum or your favourite search engine.
-
-If you ask us or our community for help then please provide all of the information mentioned in [READ ME BEFORE YOU POST](https://forum.sinusbot.com/threads/read-me-before-you-post.115/) and also the output of the [diag script](https://forum.sinusbot.com/threads/diagsinusbot-sh-sinusbot-diagnostic-script.831/).
-
-If you used the startscript you can check the status with `systemctl status sinusbot.service`.
-Logs can be viewed using `journalctl -u sinusbot.service -f --since "1 hour ago"`.
-
-## Using a startscript
+### Using a startscript
 
 *These instructions need to be done as the `root` user.*
 
@@ -204,6 +197,70 @@ Reload systemd: `systemctl daemon-reload`
 Enable autostart (optional): `systemctl enable sinusbot`
 
 Start the sinusbot: `systemctl start sinusbot`
+
+
+### Update
+
+#### Update the SinusBot
+
+*Note: The following instructions assume that you've followed this guide - otherwise you might need to slightly adapt the commands to fit your installation.*
+
+The update process is the same as the installation, we simply download and unpack the new SinusBot version over the old one.
+
+First stop your sinusbot (for example: `systemctl stop sinusbot` if you use the systemd-startscript) and then run the following commands:
+
+```bash
+# go into the sinusbot directory
+cd /opt/sinusbot
+# download the current release
+wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
+# unpack it
+tar -xjvf sinusbot.current.tar.bz2
+# copy the plugin
+cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
+# fix the file permissions if you're doing this as root
+chown -R sinusbot:sinusbot /opt/sinusbot
+```
+
+#### Update the TeamSpeak Client
+
+The update process is the same as the installation, we simply download and unpack the new TeamSpeak Client over the old one.
+
+```bash
+# set the current/supported TS3 version here
+VERSION="3.3.2"
+wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
+chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
+./TeamSpeak3-Client-linux_amd64-$VERSION.run
+```
+
+You will need to accept the terms by pressing: ++enter++, ++q++, ++y++, ++enter++.
+
+Afterwards you can delete the file: `rm TeamSpeak3-Client-linux_amd64-$VERSION.run`
+
+Now remove the `data/ts3` directory and the `libqxcb-glx-integration.so` file as well:
+
+```bash
+rm -rf data/ts3
+rm TeamSpeak3-Client-linux_amd64/xcbglintegrations/libqxcb-glx-integration.so
+```
+
+And finally copy the plugin to the plugins-directory of the TeamSpeak-Installation
+
+```bash
+cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
+# fix the file permissions if you're doing this as root
+chown -R sinusbot:sinusbot /opt/sinusbot
+```
+
+## Troubleshooting
+
+Look for any errors in the sinusbot/instance log and try to look-up solutions on our forum or your favourite search engine.
+
+If you ask us or our community for help then please provide all of the information mentioned in [READ ME BEFORE YOU POST](https://forum.sinusbot.com/threads/read-me-before-you-post.115/) and also the output of the [diag script](https://forum.sinusbot.com/threads/diagsinusbot-sh-sinusbot-diagnostic-script.831/).
+
+If you used the startscript you can check the status with `systemctl status sinusbot`.
+Logs can be viewed using `journalctl -u sinusbot -f --since "2 hours ago"`.
 
 ----
 

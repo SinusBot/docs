@@ -17,13 +17,14 @@ The default username is `admin`.
 
     More experienced users can temprorarily override the password and change it by folling these steps:
 
-    1. Stop the sinusbot (ie. `service sinusbot stop`)
+    1. Stop the sinusbot (ie. `systemctl stop sinusbot`)
     2. Start the sinusbot with the `--override-password=newpassword` flag as the sinusbot user:
         - login as the sinusbot user: `su sinusbot`
+        - go to the sinusbot directory: `cd /opt/sinusbot`
         - start the sinusbot: `./sinusbot --override-password=newpassword` (**don't** do this as root!)
     3. Login as `admin` with the specified password (ie. `newpassword`) and change your password to a new one.
     4. Stop the sinusbot: ++ctrl+c++
-    5. Afterwards restart the sinusbot *without* the `--override-password` parameter. (ie. `service sinusbot start`)
+    5. Afterwards restart the sinusbot *without* the `--override-password` parameter. (ie. `systemctl start sinusbot`)
 
     If the sinusbot doesn't start afterwards and you get something like
 
@@ -32,7 +33,7 @@ The default username is `admin`.
 
     then you did something wrong, such as: starting the bot as root or not stopping the bot, ...
 
-    Look at the sinusbot log (as it says) with `systemctl status sinusbot.service -o cat --no-pager` and search for a solution on this FAQ page or in the forum.
+    Look at the sinusbot log (as it says) with `journalctl -xe` and search for a solution on this FAQ page or in the forum.
 
 ### Is there a version for 32bit Windows / Linux? { #32bit data-toc-label='Is there a 32bit version?' }
 
