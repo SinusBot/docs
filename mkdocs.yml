@@ -4,11 +4,6 @@ copyright: 'Copyright &copy; 2019 The SinusBot Team and Contributors.'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
 nav:
   - 'Introduction': 'index.md'
-  - 'FAQ':
-    - 'General': 'faq/general.md'
-    - 'Installation': 'faq/installation.md'
-    - 'Features': 'faq/features.md'
-  - 'What is new?': 'whatsnew.md'
   - 'Installation':
     - 'Linux': 'installation/linux.md'
     - 'Windows': 'installation/windows.md'
@@ -18,12 +13,17 @@ nav:
       - 'NGINX': 'reverse-proxy/nginx.md'
       - 'Apache 2': 'reverse-proxy/apache2.md'
       - 'Common Adaptations': 'reverse-proxy/common-adaptations.md'
+  - 'FAQ':
+    - 'General': 'faq/general.md'
+    - 'Installation': 'faq/installation.md'
+    - 'Features': 'faq/features.md'
+  - 'What is new?': 'whatsnew.md'
   - 'Scripting': 'scripts.md'
   - 'Configuration': 'configuration.md'
+  - 'Licenses': 'licenses.md'
+  - 'Localization': 'locales.md'
   - 'Text-to-Speech': 'tts.md'
   - 'Speech Recognition': 'speechrecognition.md'
-  - 'Localization': 'locales.md'
-  - 'Licenses': 'licenses.md'
 theme:
   name: 'material'
   font: false
