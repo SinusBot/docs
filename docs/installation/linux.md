@@ -264,5 +264,9 @@ Logs can be viewed using `journalctl -u sinusbot -f --since "2 hours ago"`.
 
 ----
 
-Startscript: [github.com/SinusBot/linux-startscript](https://github.com/SinusBot/linux-startscript)
-Linux-Installer: [github.com/SinusBot/installer-linux](https://github.com/SinusBot/installer-linux)
+The SinusBot itself is closed-source, but some of the resources are open-source and available in the [SinusBot GitHub Organization](https://github.com/SinusBot) - contributions welcome.
+
+- [Documentation](https://github.com/SinusBot/docs)
+- [Linux-Installer](https://github.com/SinusBot/installer-linux)
+- [Startscript](https://github.com/SinusBot/linux-startscript)
+- and more!
