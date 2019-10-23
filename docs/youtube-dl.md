@@ -26,9 +26,10 @@ sudo apt-get update && sudo apt-get install python
 cd /opt/sinusbot/
 curl -L -O https://yt-dl.org/downloads/latest/youtube-dl
 chmod a+rx youtube-dl
+chown sinusbot:sinusbot youtube-dl
 ```
 
-The bot should detect it automatically and commands like `!yt`, `!ytdl`, etc. should be available.
+Afterwards set `YoutubeDLPath = "/opt/sinusbot/youtube-dl"` in your `config.ini` and restart the SinusBot.
 
 ### Automatic updates
 
