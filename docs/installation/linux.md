@@ -21,7 +21,7 @@ SinusBot Version              | TS3 Version  | Linux Kernel Version
 
 ## Installer Script
 
-If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the [Installer Script](https://forum.sinusbot.com/resources/sinusbot-installer-script.58/).
+If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the [Installer Script](https://sinusbot.github.io/installer/).
 
 ## Manual installation
 
