@@ -43,7 +43,7 @@ echo "0 0 * * * sinusbot /opt/sinusbot/youtube-dl -U --restrict-filename >/dev/n
 
 Always make sure that you are using the latest version of youtube-dl. You can upgrade it by running `/opt/sinusbot/youtube-dl -U` (adjust to your own path) - assuming the user you run this with has write permissions.
 
-You should also try manually downloading something with youtube-dl via the command line before reporting a bug. You can do that with `/opt/sinusbot/youtube-dl <mediaurl>`.
+You should also try manually downloading something with youtube-dl via the command line before reporting a bug. You can do that with `/opt/sinusbot/youtube-dl <mediaurl>` (the sinusbot usually passes the following flags: `-i --no-playlist --no-call-home -J -x <mediaurl>`).
 
 Make sure that the `YoutubeDLPath` in your `config.ini` is set to the correct path as described above.
 
@@ -63,6 +63,13 @@ Try downloading something in your SinusBot webinterface on the "Upload" page and
 
 #### HTTP error 429: Too many requests
 
+Try this:
+
 - Create/modify the file `/etc/youtube-dl.conf`
 - Paste this inside the file: `--force-ipv4`
 - Save and try again
+
+If it still logs this error:
+
+**This error means that YouTube is limiting your IP-address.**
+Unfortunately there is nothing else that you could do other than trying to force ipv4 (as described above) or trying to use a different IP-adress.
