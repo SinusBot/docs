@@ -9,6 +9,8 @@ Be sure that "TeamSpeak 3 Support" is checked, as shown in the following picture
 If the option is not available then the installer could not find a compatible TeamSpeak Client (see step 1).
 If you continue installation without this checkbox enabled the SinusBot will only be able to connect to Discord.
 
+3. Optionally you can [install youtube-dl](https://sinusbot.github.io/docs/youtube-dl/) to allow you to play media from youtube and other supported sites
+
 ## I can only connect the SinusBot to Discord, how can I fix it?
 
 As mentioned above: "TeamSpeak 3 Support" needs to be enabled when installing the SinusBot. To fix this you need to:
