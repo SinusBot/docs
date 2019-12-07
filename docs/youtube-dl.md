@@ -1,6 +1,6 @@
 # Installing youtube-dl
 
-The bot can use [youtube-dl](https://rg3.github.io/youtube-dl/) to download media files from several [supported websites](https://rg3.github.io/youtube-dl/supportedsites.html).
+The bot can use [youtube-dl](https://github.com/ytdl-org/youtube-dl/) to download media files from several [supported websites](https://rg3.github.io/youtube-dl/supportedsites.html).
 
 ## Windows
 
@@ -15,7 +15,7 @@ The bot should detect it automatically and commands like `!yt`, `!ytdl`, etc. sh
 
 If you face an issue, make sure you have the [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/en-US/download/details.aspx?id=5555) installed.
 
-You should also try updating youtube-dl by redownloading it as described above.
+You should also **try updating youtube-dl** by redownloading it as described above.
 
 ## Linux
 
@@ -63,13 +63,12 @@ Try downloading something in your SinusBot webinterface on the "Upload" page and
 
 #### HTTP error 429: Too many requests
 
-Try this:
+Create the file `/etc/youtube-dl.conf` with the content `--force-ipv4` and then try again. </br>
+You can do this easily with the following command: `echo "--force-ipv4" >> /etc/youtube-dl.conf`
 
-- Create/modify the file `/etc/youtube-dl.conf`
-- Paste this inside the file: `--force-ipv4`
-- Save and try again
+If you still receive this error afterwards:
 
-If it still logs this error:
-
-**This error means that YouTube is limiting your IP-address.**
+This is neither a bug in youtube-dl nor the SinusBot. This error means that **YouTube** is limiting your IP-address. </br>
 Unfortunately there is nothing else that you could do other than trying to force ipv4 (as described above) or trying to use a different IP-adress.
+
+Note: youtube-dl has [network options](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#network-options) such as `--source-address <ip>` to select the correct ip-address in case your server has more than one and `--proxy <url>` that you can use to route requests over another server with a http(s)/socks proxy, however we will **not** help you with configuring this as this has nothing to do with the SinusBot itself.
