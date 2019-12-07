@@ -71,4 +71,4 @@ If you still receive this error afterwards:
 This is neither a bug in youtube-dl nor the SinusBot. This error means that **YouTube** is limiting your IP-address. </br>
 Unfortunately there is nothing else that you could do other than trying to force ipv4 (as described above) or trying to use a different IP-adress.
 
-Note: youtube-dl has [network options](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#network-options) such as `--source-address <ip>` to select the correct ip-address in case your server has more than one and `--proxy <url>` that you can use to route requests over another server with a http(s)/socks proxy, however we will **not** help you with configuring this as this has nothing to do with the SinusBot itself.
+*Note: youtube-dl has [network options](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#network-options) such as `--source-address <ip>` to select the correct ip-address in case your server has more than one and `--proxy <url>` that you can use to route requests over another server with a http(s)/socks proxy, however we will **not** help you with configuring this as it has nothing to do with the SinusBot itself.*
