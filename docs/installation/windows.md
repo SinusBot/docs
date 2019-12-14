@@ -1,6 +1,8 @@
 1. Download and install the latest **64-Bit** [TeamSpeak 3 Client](https://teamspeak.com/en/downloads/) for Windows.
 
-2. Download the [SinusBot](https://www.sinusbot.com/#download) for Windows and start it.
+2. Download the [SinusBot](https://www.sinusbot.com/#download) Installer for Windows and start it.
+
+3. Optionally you can [install youtube-dl](https://sinusbot.github.io/docs/youtube-dl/) afterwards to allow you to play media from youtube and other supported sites
 
 Be sure that "TeamSpeak 3 Support" is checked, as shown in the following picture:
 
@@ -41,6 +43,6 @@ There are a few threads about this on our forum:
 
 There is no official support from TeamSpeak to disable this behavior but there is a [workaround as described in this post](https://forum.sinusbot.com/threads/sinusbot-mutet-sich.5289/page-2#post-33696) (in german):
 
-They've solved this by installing the TS3 plugin "Session Lock Actions" and changing the settings as shown.
+They've solved this by installing the TS3 plugin "Session Lock Actions" and changing the settings as shown below (set to "ticked" checkbox, not "filled").
 
-![Session Lock Actions Settings: Activate the Microphone, Activate the Speakers](https://forum.sinusbot.com/attachments/sinus1-png.2561/)
+![Session Lock Actions Settings: Activate the Microphone, Activate the Speakers](windows_session_lock_actions_settings.png)
