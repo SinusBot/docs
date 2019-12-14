@@ -155,3 +155,22 @@ The default username is `admin`.
 !!! success ""
     This error message appears when the time of your server is not accurate.
     To fix this issue set the correct time and configure ntp to keep it synced properly.
+
+
+### What does "could not contact update server" mean?
+
+!!! success ""
+    This error message appears when the SinusBot is unable to contact our update servers.
+
+    Possible causes:
+
+    - no internet connection / invalid network configuration
+    - cloudflare is showing a captcha page because your IP is marked as shady
+    - your IP is blacklisted due to suspected non-private use
+        - you are only allowed to run **one** SinusBot and **commercial/non-private use is not allowed** without prior, written consent by the author. If you need more instances then [get a license](https://sinusbot.github.io/docs/licenses/).
+        - if you decide to contact us: please be polite, explain the situation in detail and provide your IP address
+        - there is no point in lying, if you are not honest then we are not interested in talking to you
+
+    Please check `curl -v --no-keepalive --http1.1 https://update01.sinusbot.com`.<br>
+    If it returns a 404 (`< HTTP/1.1 404 Not Found`) then cloudflare should not be the issue.<br>
+    If it returns a 403 (`< HTTP/1.1 403`) and HTML code with a captcha then cloudflare requires you to solve the captcha because your IP address is not trusted. Before you ask: No, we can't whitelist your IP from cloudflare.
