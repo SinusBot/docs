@@ -255,11 +255,11 @@ chown -R sinusbot:sinusbot /opt/sinusbot
 
 ## Troubleshooting
 
-Look for any errors in the sinusbot/instance log and try to look-up solutions on our forum or your favourite search engine.
+Look for any errors in the sinusbot/instance log and try to look-up solutions on our [forum](https://forum.sinusbot.com/) or your favourite search engine.
 
-If you ask us or our community for help then please provide all of the information mentioned in [READ ME BEFORE YOU POST](https://forum.sinusbot.com/threads/read-me-before-you-post.115/) and also the output of the [diag script](https://forum.sinusbot.com/threads/diagsinusbot-sh-sinusbot-diagnostic-script.831/).
+If you ask us or our community for help then please provide the output of the [diag script](https://forum.sinusbot.com/threads/diagsinusbot-sh-sinusbot-diagnostic-script.831/) and follow everything that is mentioned in [READ ME BEFORE YOU POST](https://forum.sinusbot.com/threads/read-me-before-you-post.115/).
 
-If you used the startscript you can check the status with `systemctl status sinusbot`.
+If you use the systemd-startscript you can check the status with `systemctl status sinusbot`.
 Logs can be viewed using `journalctl -u sinusbot -f --since "2 hours ago"`.
 
 ----
