@@ -18,21 +18,21 @@ As mentioned above, licenses are done in batches every couple of days. It usuall
 
 ## How long is such a license valid?
 
-Licenses are bound to the TeamSpeak-Server UID. If your TeamSpeak Server has a different Server UID than specified in the license, you have to request a new license.
-
 A license will also be valid for at least a major release (e.g. 2.0 could require a new license compared to 1.0). We currently don't have plans to invalidate any license given out before 1.0 with the release of 1.0.
+
+Licenses are **not** bound to the TeamSpeak-Server UID nor the IP address anymore; the license is still valid even if they change.
 
 ## How do I install the license?
 
-Once you've received a license you just have to download the `private.dat` file from the license page and save/copy it into the same folder the bot is installed in (normally that should be in `/opt/sinusbot/`).
-After restarting the sinusbot the new instances will appear automatically.
+Once you've received a license you just have to download the `private.dat` file from the [License Page](https://forum.sinusbot.com/license) and save/copy it into the same folder the bot is installed in (normally that should be in `/opt/sinusbot/`).
+After restarting the SinusBot the new instances will appear automatically.
 
 If no instances appear afterwards then you did something wrong.
 Make sure that...
 
-- `private.dat` is in the directory where the sinusbot is installed (typically `/opt/sinusbot/` if you followed our guide or used the installer)
-- `private.dat` is owned and readable by the sinusbot user (`chown sinusbot:sinusbot private.dat`)
-- `private.dat` was uploaded correctly 
+- `private.dat` is in the directory where the SinusBot is installed (typically `/opt/sinusbot/` if you followed our guide or used the installer)
+- `private.dat` is owned and readable by the SinusBot user (`chown sinusbot:sinusbot /opt/sinusbot/private.dat`)
+- `private.dat` was uploaded correctly
 
 ## Disclaimer
 
