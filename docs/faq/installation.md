@@ -165,6 +165,8 @@ The default username is `admin`.
     This error message appears when the time of your server is not accurate.
     To fix this issue set the correct time and configure ntp to keep it synced properly.
 
+    This might also be caused by old SinusBot versions. Update your SinusBot if necessary.
+
 
 ### What does "could not contact update server" mean?
 
@@ -173,13 +175,19 @@ The default username is `admin`.
 
     Possible causes:
 
-    - no internet connection / invalid network configuration
+    - no internet connection or invalid network/dns-resolver configuration
     - cloudflare is showing a captcha page because your IP is marked as shady
     - your IP is blacklisted due to suspected non-private use
-        - you are only allowed to run **one** SinusBot and **commercial/non-private use is not allowed** without prior, written consent by the author. If you need more instances then [get a license](https://sinusbot.github.io/docs/licenses/).
-        - if you decide to contact us: please be polite, explain the situation in detail and provide your IP address
-        - there is no point in lying, if you are not honest then we are not interested in talking to you
+        - You are only allowed to run **one** SinusBot and **commercial/non-private use is not allowed** without prior, written consent by the author. If you need more instances then [get a license](https://sinusbot.github.io/docs/licenses/).
+        - In case you think there was a mistake or you want to ask for a second chance, post in our forum or discord server and include the following information:
+            - your servers IP address
+            - output of the curl and  dig commands below
 
-    Please check `curl -v --no-keepalive --http1.1 https://update01.sinusbot.com`.<br>
-    If it returns a 404 (`< HTTP/1.1 404 Not Found`) then cloudflare should not be the issue.<br>
+            Please be polite, explain the situation in detail and provide your IP address! <br>
+            There is no point in lying, if you are not honest then we are not interested in talking to you.
+
+    Please check `curl -v --no-keepalive --http1.1 https://update01.sinusbot.com`. <br>
+    If it returns a 404 (`< HTTP/1.1 404 Not Found`) then cloudflare should not be the issue. <br>
     If it returns a 403 (`< HTTP/1.1 403`) and HTML code with a captcha then cloudflare requires you to solve the captcha because your IP address is not trusted. Before you ask: No, we can't whitelist your IP from cloudflare.
+
+    To check DNS, use `dig A +short update01.sinusbot.com`. It should return something in the [cloudflare ranges](https://www.cloudflare.com/ips/).
