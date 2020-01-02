@@ -35,6 +35,16 @@ The default username is `admin`.
 
     Look at the sinusbot log (as it says) with `journalctl -xe` and search for a solution on this FAQ page or in the forum.
 
+### What Ports and IP Ranges are used? { #ports-and-ips data-toc-label='Ports and IP Ranges' }
+
+!!! success ""
+    The SinusBot requires an internet connection and contacts our update servers on each start.
+    As the update servers make use of use cloudflare, access to [cloudflares IP ranges](https://www.cloudflare.com/ips/) is required.
+
+    The TeamSpeak 3 client makes outgoing connections to the TeamSpeak server that you configure. The default ports are listed [here](https://support.teamspeakusa.com/index.php?/Knowledgebase/Article/View/44/16/which-ports-does-the-teamspeak-3-server-use) (ie. `9987 (UDP)`, `30033 (TCP)`, ...).
+
+    Finally, the SinusBot webinterface listens for incoming HTTP requests on port `8087 (TCP)` by default. The address and port can be changed in the config by setting `ListenHost` and `ListenPort`. Make sure to allow incoming TCP requests to this port in your firewall.
+
 ### Is there a version for 32bit Windows / Linux? { #32bit data-toc-label='Is there a 32bit version?' }
 
 !!! success ""
@@ -43,7 +53,7 @@ The default username is `admin`.
 ### I get some message like "ELF: not found" on Linux when trying to start the bot. WTF? { #elf-not-found data-toc-label='Error: ELF: not found' }
 
 !!! success ""
-    You are trying to run the bot on a 32bit OS. Upgrade your system to 64bit to make the bot work (see above: there’s no 32bit version).
+    You are trying to run the bot on a 32bit OS. Upgrade your system to 64bit to make the bot work (see above: [there is no 32bit version](#32bit)).
 
 ### Do you support CentOS, Fedora, (name your distro)…? { #distro-support data-toc-label='Supported Distros' }
 
