@@ -2,7 +2,7 @@
 
 2. Download the [SinusBot](https://www.sinusbot.com/#download) Installer for Windows and start it.
 
-3. Optionally you can [install youtube-dl](https://sinusbot.github.io/docs/youtube-dl/) afterwards to allow you to play media from youtube and other supported sites
+3. Optionally you can [install youtube-dl](https://sinusbot.github.io/docs/youtube-dl/) afterwards to allow you to play media from YouTube and other supported sites
 
 Be sure that "TeamSpeak 3 Support" is checked, as shown in the following picture:
 
@@ -13,7 +13,7 @@ If you continue installation without this checkbox enabled the SinusBot will onl
 
 ## Troubleshooting
 
-Look for any errors in the sinusbot/instance log and try to look-up solutions on our [forum](https://forum.sinusbot.com/) or your favourite search engine.
+Look for any errors in the SinusBot/instance log and try to look-up solutions on our [forum](https://forum.sinusbot.com/) or your favorite search engine.
 
 If you ask us or our community for help then please provide all of the information mentioned in [READ ME BEFORE YOU POST](https://forum.sinusbot.com/threads/read-me-before-you-post.115/).
 
@@ -22,7 +22,7 @@ If you ask us or our community for help then please provide all of the informati
 As mentioned above: "TeamSpeak 3 Support" needs to be enabled when installing the SinusBot. To fix this you need to:
 
 1. Delete the SinusBot
-2. Uninstall old or otherwise uncompatible TeamSpeak Clients.
+2. Uninstall old or otherwise incompatible TeamSpeak Clients.
 3. Install a compatible (latest version, 64-Bit) TeamSpeak Client
 4. Reinstall the SinusBot as described above
 

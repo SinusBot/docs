@@ -32,7 +32,7 @@
 ### My bot eats a lot of RAM. Why? { #high-ram-usage data-toc-label='High RAM Usage?' }
 
 !!! success ""
-    The sinusbot itself doesn't use lots of memory but reserves a fair amount. However, this doesn't count as used, so you don't need to worry about it. More details about memory usage on linux can be found [here](https://www.linuxatemyram.com/).
+    The sinusbot itself doesn't use lots of memory but reserves a fair amount. However, this doesn't count as used, so you don't need to worry about it. More details about memory usage on Linux can be found [here](https://www.linuxatemyram.com/).
 
     The actual TeamSpeak Client instances require more RAM, from which a big part is shared between multiple instances - so again: you probably don't need to worry about it.
 
@@ -98,7 +98,7 @@
         * Linux (Ubuntu 14.04, Debian 8, CentOS 7 or better)
         * Windows (7, 8, 10, Server 2008, 2012 or better), with all latest Updates / Service Packs
     * Make sure you have the latest Sinusbot version
-    * Make sure you use a valid license for Teamspeak / a valid hoster with legal licenses.
+    * Make sure you use a valid license for Teamspeak / a valid hosting provider with legal licenses.
 
     1. We want to support more operating systems, but we can't test everything so if you wan't to try the bot on an not-listed platform you can try it. But you should have the knowledge of the platform!
     2. We respect Teamspeak, so we will not support invalid or illegal servers no matter what areas.

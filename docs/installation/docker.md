@@ -1,4 +1,4 @@
-Detailed instructions on how to install the sinusbot on docker can be found on the [Github Page](https://github.com/SinusBot/docker). You can also check out the image directly on [Docker Hub](https://hub.docker.com/r/sinusbot/docker).
+Detailed instructions on how to install the sinusbot on docker can be found on the [GitHub Page](https://github.com/SinusBot/docker). You can also check out the image directly on [Docker Hub](https://hub.docker.com/r/sinusbot/docker).
 
 ```bash
 docker run -d -p 8087:8087 \

@@ -2,7 +2,7 @@
 
 Your bot can be extended by installing scripts from other users or by writing and activating your own scripts. Such scripts can react on several events and control how the bot should react to them.
 
-This can be a simple 'Hello' response when someone writes 'hello' to the bot or a pretty detailed leveling/xp system where the bot tracks the online time of each user. You can find many scripts from other users [here](https://forum.sinusbot.com/resources/categories/scripts.2/).
+This can be a simple 'Hello' response when someone writes 'hello' to the bot or a pretty detailed leveling/XP system where the bot tracks the online time of each user. You can find many scripts from other users [here](https://forum.sinusbot.com/resources/categories/scripts.2/).
 
 The language the scripts have to be in is JavaScript (ECMAScript Version 5). Since version 1.0 you can now also use newer ES6 features.
 
@@ -94,7 +94,7 @@ Hides the script from the settings page. Should be used together with `autorun`.
 
 ##### requiredModules ([]string)
 
-Using this, you can define which restricted modules the script wants to use. If it's not allowed via the config, the script will not load at all but instead return an error on startup. This field is mandatory if you use any restricted module from version 1.0 onwards.
+Using this, you can define which restricted modules the script wants to use. The script has to be re-enabled by the user if the required modules change. This field is mandatory if you use any restricted module from version 1.0 onward.
 
 ##### vars (array)
 

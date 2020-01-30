@@ -6,11 +6,11 @@ Is there an outdated translation and the author does not answer your request? Re
 Just follow these steps:
 
 * Make sure you have a folder called data/locales within in your SinusBot directory
-* Create a new file called ru.json (if you want to create a russian translation for example) with the following contents: `{"__name": "Russian", "__code": "ru-RU"}`
-* Open up the webinterface of the bot and navigate to your personal settings
+* Create a new file called ru.json (if you want to create a Russian translation for example) with the following contents: `{"__name": "Russian", "__code": "ru-RU"}`
+* Open up the web-interface of the bot and navigate to your personal settings
 * Choose Russian as your language
 * Then click on "edit" behind the language selection
-* Fill all the textboxes next to the phrases you would like to translate
+* Fill all the text boxes next to the phrases you would like to translate
 * Hit "Export" at the bottom of the page
 * Copy the contents of the export box to your ru.json
 * Done.

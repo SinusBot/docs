@@ -47,7 +47,7 @@ unzip tts_service_x86_64.nexe.zip
 
 If the last command fails, you probably need to install unzip first. On Debian/Ubuntu this can be done with `apt install unzip`.
 
-Afterwards, edit your config.ini ato contain the following:
+Afterwards, edit your `config.ini` to contain the following:
 
 ```ini
 [TTS]

@@ -1,6 +1,6 @@
 # How to increase TeamSpeak security level
 
-Open your SinusBot webinterface and go to: Settings ⇒ Instance Settings
+Open your SinusBot web-interface and go to: Settings ⇒ Instance Settings
 
 ![Instance Settings](incr01_instance_settings.png)
 
@@ -28,9 +28,9 @@ Start your TeamSpeak client and open the "Identities" menu ++ctrl+i++
 
 ![TS3 Client Identities Menu](incr04_ts3.png)
 
-Rightclick in the "Local Identities" field and select "Import".
+Right-click in the "Local Identities" field and select "Import".
 
-![Kontextmenu: Import](incr05_identities.png)
+![Context-menu: Import](incr05_identities.png)
 
 Select the previously created file `sinusbot_identity.ini`.
 
@@ -44,7 +44,7 @@ Click on "Improve", then enter your "Requested Security Level" and click on "Sta
 
 ![Improve](incr08_improve.png)
 
-When finished click "Close" and then rightclick in the SinusBot Identity and select "Export".
+When finished click "Close" and then right-click in the SinusBot Identity and select "Export".
 
 ![Export](incr09_export.png)
 

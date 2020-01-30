@@ -23,4 +23,4 @@
 ### How can guests control the bot?
 
 !!! success ""
-    You can bind a bot user to a server group for that (for example: your default guest group) and set the privileges you want the guests to have. The webinterface will however always require a login.
+    You can bind a bot user to a server group for that (for example: your default guest group) and set the privileges you want the guests to have. The web-interface will however always require a login.

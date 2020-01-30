@@ -6,7 +6,7 @@
 
 ### Scripting: Introducing v8
 
-The scripting engine has been changed to v8 - that's the engine that also powers the Chrome browser and node.js. The change will bring many advantages such as ES6 compatibility and an increased control over the ressources used by it.
+The scripting engine has been changed to v8 - that's the engine that also powers the Chrome browser and node.js. The change will bring many advantages such as ES6 compatibility and an increased control over the resources used by it.
 
 This comes with a couple of changes that script authors need to adapt their scripts to. More info can be found in the [changelog of Alpha 1](https://forum.sinusbot.com/resources/internal-beta.1/updates#resource-update-1119).
 

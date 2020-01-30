@@ -1,10 +1,10 @@
-If you want to serve the web interface of the SinusBot encrypted or with the rest of your website, you usually want to setup a reverse proxy. Most of the time, you already have a webserver (like Apache2 or nginx) in place, which you can use to forward the incoming traffic to the SinusBot.
+If you want to serve the web interface of the SinusBot encrypted or with the rest of your website, you usually want to setup a reverse proxy. Most of the time, you already have a web server (like Apache2 or nginx) in place, which you can use to forward the incoming traffic to the SinusBot.
 
 First you need to add a DNS record (for example an A-record) that points from your subdomain (e.g. sinusbot) to the IP of your server.
 
 After that, create a file at `/etc/nginx/sites-available/sinusbot.conf` with the following content.
 
-In the config files below you need to adjust the value of the following variables:
+You need to adjust the value of the following variables in the configuration examples below:
 
 - `server_name` (domain/subdomain)
 - `proxy_pass` (local address of your sinusbot)
