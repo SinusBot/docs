@@ -1,6 +1,8 @@
 # Licenses
 
-!!! warning "Licenses are currently **only** available **for the Linux version** of the bot."
+!!! warning "Please note the following restrictions"
+    Licenses are **only** available **for the Linux version** of the bot.<br/>
+    Licenses are **only** available **for TeamSpeak** and not Discord.
 
 So you own a large server and two instances are not enough for you? For this case we're handing out free extended licenses which come with 4 more instances by default, so you've got a total of 6.
 
