@@ -19,10 +19,12 @@ Make sure that the server has enough free disk space to fit your needs.
 
 #### Compatible Versions
 
-SinusBot Version              | TS3 Client Version  | Linux Kernel Version
-------------------------------|---------------------|---------------------
-1.0.0-beta6, ..., 1.0.0-beta3 | 3.3+                | 3.17+
-1.0.0-beta2, 1.0.0-beta1      | 3.2.5               | 2.6+
+SinusBot Version         | TS3 Client Version  | Linux Kernel Version
+-------------------------|---------------------|---------------------
+1.0.0-beta3 and later    | 3.3+                | 3.17+
+1.0.0-beta2, 1.0.0-beta1 | 3.2.5               | 2.6+
+
+Please note that we do not support old beta releases. See [Support Policy / Support Grundregeln](https://sinusbot.github.io/docs/faq/general/#support-policy).
 
 ## Installer Script
 
