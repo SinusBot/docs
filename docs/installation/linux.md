@@ -1,11 +1,16 @@
 ## Requirements
 
+!!! Warning "The TeamSpeak Client 3.3+ requires at least a Linux Kernel of version 3.17 or higher!"
+    You can check your Linux Kernel version with `uname -a`.
+
 Make sure that your OS (Operating System) is up-to-date.
 We recommend recent LTS releases such as **Ubuntu 18.04** or **Debian 10** (buster), minimal reqired versions:
 
 - Debian 8+
 - Ubuntu 16.10+
 - CentOS 7+
+
+When choosing a VPS (virtual private server), make sure that it is **not** based on OpenVZ, because the Linux kernel will be too old. Instead choose a **KVM** or **LCX** based VPS with a recent OS.
 
 The server should have *at least* 512MB or 1GB of free RAM.
 Although the SinusBot itself doesn't require much RAM, the TeamSpeak Client(s) often take up the most memory.
@@ -205,6 +210,8 @@ Start the sinusbot: `systemctl start sinusbot`
 
 *Note: The following instructions assume that you've followed this guide - otherwise you might need to slightly adapt the commands to fit your installation.*
 
+Before continuing you should install the dependencies mentioned at the bebinning of the "Manual installation" section.
+
 The update process is the same as the installation, we simply download and unpack the new SinusBot version over the old one.
 
 First stop your sinusbot (for example: `systemctl stop sinusbot` if you use the systemd-startscript) and then run the following commands:
@@ -223,6 +230,8 @@ chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
 #### Update the TeamSpeak Client
+
+Before continuing you should install the dependencies mentioned at the bebinning of the "Manual installation" section.
 
 The update process is the same as the installation, we simply download and unpack the new TeamSpeak Client over the old one.
 
