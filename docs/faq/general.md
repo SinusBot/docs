@@ -27,7 +27,9 @@
 ### Where can I find the version of my SinusBot?  { #what-is-my-version}
 
 !!! success ""
-    If the bot is already running, open up the web interface and go to **Settings** > **Info** > **About**. If the bot is not running, you can start it with `./sinusbot -v` on your command line and it will display the version information there.
+    If the bot is already running, open up the web interface and go to **Settings** > **Info** > **About**.
+    
+    If the bot is not running, you can start it with `./sinusbot -v` on your command line and it will display the version information there.
 
 ### My bot eats a lot of RAM. Why? { #high-ram-usage data-toc-label='High RAM Usage?' }
 
@@ -92,33 +94,33 @@
 ### Support Policy / Support Grundregeln { #support-policy data-toc-label='Support Policy' }
 
 ???+ info "English"
-    In the past we got tons of support requests in case of the user is using an old and no longer supported version (How to check my Bot Version?) of our software. We don't want this any more... So of course we need some rules!
+    In the past we got tons of support requests in case of the user is using an old and no longer supported version ([How to check my Bot Version?](https://sinusbot.github.io/docs/faq/general/#what-is-my-version)) of our software. We don't want this any more... So of course we need some rules!
 
     * Make sure you use an up to date version of:
-        * Linux (Ubuntu 14.04, Debian 8, CentOS 7 or better)
+        * Linux (Ubuntu 16.10+, Debian 8+, CentOS 7+ or better)
         * Windows (7, 8, 10, Server 2008, 2012 or better), with all latest Updates / Service Packs
-    * Make sure you have the latest Sinusbot version
+    * Make sure you have the latest SinusBot version
     * Make sure you use a valid license for Teamspeak / a valid hosting provider with legal licenses.
 
     1. We want to support more operating systems, but we can't test everything so if you wan't to try the bot on an not-listed platform you can try it. But you should have the knowledge of the platform!
     2. We respect Teamspeak, so we will not support invalid or illegal servers no matter what areas.
 
-    Before posting: [READ THIS FIRST](https://forum.sinusbot.com/threads/read-me-before-you-post.342/). Thanks!
+    **Before posting: [READ THIS FIRST](https://forum.sinusbot.com/threads/read-me-before-you-post.342/).** Thanks!
 
     **Every topic and private message which is violating this rule will be ignored/deleted.**
 
 ???+ info "Deutsch"
-    In der Vergangenheit haben wir massenhaft Support-Anfragen erhalten, wenn der Benutzer eine alte oder nicht mehr unterstützte Version unserer Software verwendet (Wie kann ich meine Bot Version prüfen?). Wir wollen das nicht mehr ... Daher brauchen wir Regeln!
+    In der Vergangenheit haben wir massenhaft Support-Anfragen erhalten, wenn der Benutzer eine alte oder nicht mehr unterstützte Version unserer Software verwendet ([Wie kann ich meine Bot Version prüfen?](https://sinusbot.github.io/docs/faq/general/#what-is-my-version)). Wir wollen das nicht mehr ... Daher brauchen wir Regeln!
 
     * Stelle sicher, dass du eine aktuelle Betriebssystem Version verwendest:
-        * Linux (Ubuntu 14.04, Debian 8, CentOS 7 oder besser)
+        * Linux (Ubuntu 16.10+, Debian 8+, CentOS 7+ oder besser)
         * Windows (7, 8, 10, Server 2008, 2012 oder besser), mit allen Updates / Service Packs
-    * Stelle sicher, dass du die aktuellste Sinusbot Version hast
+    * Stelle sicher, dass du die aktuellste SinusBot Version hast
     * Stelle sicher das du eine gültige Teamspeak Lizenz verwendest, bzw dein Teamspeak Hoster sich an die Teamspeak Richtlinien hält.
 
     1. Wir wollen mehr Betriebssysteme unterstützen, aber wir können nicht alles testen, wenn man den bot auf einer nicht- gelisteten Plattform ausprobieren möchte kann man das tun. Doch du solltest das Wissen über die Plattform haben!
     2. Wir Respektieren Teamspeak, daher werden wir ungültige oder Illegale Server nicht Supporten egal in welchen bereichen.
 
-    Befor du etwas postest: [LIES MICH](https://forum.sinusbot.com/threads/lies-mich-bevor-du-schreibst.146/). Danke!
+    **Befor du etwas postest: [LIES MICH](https://forum.sinusbot.com/threads/lies-mich-bevor-du-schreibst.146/).** Danke!
 
     **Jedes Thema und jede private Nachricht, die gegen diese Regel verstößt, wird ignoriert/gelöscht.**
