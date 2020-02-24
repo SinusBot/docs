@@ -4,7 +4,7 @@
     You can check your Linux Kernel version with `uname -a`.
 
 Make sure that your OS (Operating System) is up-to-date.
-We recommend recent LTS releases such as **Ubuntu 18.04** or **Debian 10** (buster), minimal reqired versions:
+We recommend recent LTS releases such as **Ubuntu 18.04** or **Debian 10** (buster), minimal required versions:
 
 - Debian 8+
 - Ubuntu 16.10+
@@ -49,7 +49,7 @@ On Debian and some Ubuntu versions you might as well have to install, so at leas
 apt-get install libglib2.0-0
 ```
 
-**In case of Ubuntu 18.04**: Depending on the Ubuntu installation the `universe` repository of Ubuntu is not activated, resulting in missing packages for required dependencies *x11vnc* and *xvfb*. When said problem ocurrs, enable the `universe` repository by using following command:
+**In case of Ubuntu 18.04**: Depending on the Ubuntu installation the `universe` repository of Ubuntu is not activated, resulting in missing packages for required dependencies *x11vnc* and *xvfb*. When said problem occurs, enable the `universe` repository by using following command:
 
 ```bash
 add-apt-repository universe
@@ -212,11 +212,11 @@ Start the sinusbot: `systemctl start sinusbot`
 
 *Note: The following instructions assume that you've followed this guide - otherwise you might need to slightly adapt the commands to fit your installation.*
 
-Before continuing you should install the dependencies mentioned at the bebinning of the "Manual installation" section.
+Before continuing you should install the dependencies mentioned at the beginning of the "Manual installation" section.
 
 The update process is the same as the installation, we simply download and unpack the new SinusBot version over the old one.
 
-First stop your sinusbot (for example: `systemctl stop sinusbot` if you use the systemd-startscript) and then run the following commands:
+First stop your sinusbot (e.g. `systemctl stop sinusbot` if you use the systemd-startscript) and then run the following commands:
 
 ```bash
 # go into the sinusbot directory
@@ -233,7 +233,7 @@ chown -R sinusbot:sinusbot /opt/sinusbot
 
 #### Update the TeamSpeak Client
 
-Before continuing you should install the dependencies mentioned at the bebinning of the "Manual installation" section.
+Before continuing you should install the dependencies mentioned at the beginning of the "Manual installation" section.
 
 The update process is the same as the installation, we simply download and unpack the new TeamSpeak Client over the old one.
 
@@ -264,9 +264,18 @@ cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
 chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
+### Migrating to another System
+
+First, install the SinusBot on the new system according to our guides.
+Afterwards, copy over the `data`-folder, `scripts`-folder, `config.ini` and `private.dat` from your old SinusBot installation folder (typically `/opt/sinusbot/` on Linux).
+
+Depending on how you copied the files, you might need to [fix your file permissions](https://sinusbot.github.io/docs/faq/installation/#fix-file-permissions) afterwards.
+
+When finished, stop the SinusBot on the old system (e.g.`systemctl stop sinusbot`) and (re)start the SinusBot on the new system (e.g.`systemctl restart sinusbot`).
+
 ## Troubleshooting
 
-Look for any errors in the sinusbot/instance log and try to look-up solutions on our [forum](https://forum.sinusbot.com/) or your favourite search engine.
+Look for any errors in the sinusbot/instance log and try to look-up solutions on our [forum](https://forum.sinusbot.com/) or your favorite search engine.
 
 If you ask us or our community for help then please provide the output of the [diag script](https://forum.sinusbot.com/threads/diagsinusbot-sh-sinusbot-diagnostic-script.831/) and follow everything that is mentioned in [READ ME BEFORE YOU POST](https://forum.sinusbot.com/threads/read-me-before-you-post.115/).
 
