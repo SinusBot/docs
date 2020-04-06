@@ -6,16 +6,18 @@ The bot can use [youtube-dl](https://github.com/ytdl-org/youtube-dl/) to downloa
 
 - Install the [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/en-US/download/details.aspx?id=5555) if it isn't installed already
 - Download [youtube-dl.exe](https://yt-dl.org/downloads/latest/youtube-dl.exe)
-- Save it in the bot directory (same folder the sinusbot.exe is in, for example in `C:\SinusBot\` - depending on where you installed it)
-- Restart the bot
+- Save it in the SinusBot directory (same folder the sinusbot.exe is in, for example in `C:\SinusBot\` - depending on where you installed it)
+- Restart the SinusBot (in taskbar right-click => close, then start again)
 
-The bot should detect it automatically and commands like `!yt`, `!ytdl`, etc. should be available.
+The SinusBot should detect it automatically and commands like `!yt`, `!ytdl`, etc. should be available.
 
 ### Troubleshooting
 
 If you face an issue, make sure you have the [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/en-US/download/details.aspx?id=5555) installed.
 
 You should also **try updating youtube-dl** by re-downloading it as described above.
+
+Try downloading something in your SinusBot web-interface on the "Upload" page and check what it shows in the list. "youtube-dl unavailable" indicates that youtube-dl is not installed correctly; In that case reinstall it as shown above.
 
 ## Linux
 
