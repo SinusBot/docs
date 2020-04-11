@@ -42,18 +42,18 @@ markdown_extensions: # see https://python-markdown.github.io/extensions/, https:
   - pymdownx.tilde
   - pymdownx.mark
   - toc:
-      permalink: "\ue157"
+      permalink: "🔗"
 extra_css:
   - extra.css
 extra:
   social:
-    - type: globe
+    - icon: fontawesome/solid/globe
       link: https://sinusbot.com
-    - type: github
+    - icon: fontawesome/brands/github
       link: https://github.com/SinusBot
-    - type: twitter
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/sinusbot
-    - type: facebook
+    - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/sinusbot
-    - type: question
+    - icon: fontawesome/solid/question
       link: https://forum.sinusbot.com
