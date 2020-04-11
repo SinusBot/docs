@@ -13,7 +13,7 @@
 ### Can I download whole playlists from YouTube? { #download-youtube-playlists data-toc-label='Download YouTube Playlists' }
 
 !!! success ""
-    Yes, you can. This requires [installing youtube-dl](../../youtube-dl/). When creating a new playlist, you have the option to enter a URL from which the playlist will be fetched.
+    Yes, you can. This requires [installing youtube-dl](../../youtube-dl/). When creating a new playlist click "Show advanced options", then you have the option to enter a URL from which the playlist will be fetched.
 
 ### I want to integrate the bot into my website / remote control the bot via script. How can I do that? { #sinusbot-api-integration data-toc-label='SinusBot API Integration' }
 
