@@ -1,6 +1,6 @@
 language: python
 install:
-- pip install mkdocs-material pygments pymdown-extensions
+- pip install mkdocs mkdocs-material pygments pymdown-extensions
 script:
 - mkdocs build --verbose --clean
 deploy:
