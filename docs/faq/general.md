@@ -24,6 +24,8 @@
 !!! success ""
     Sponsoring the SinusBot is currently not allowed without prior written permission of the author.
 
+    Private use (non-commercial and neither profiting directly nor indirectly in any way) such as sharing with your friends is fine of course.
+
 ### Where can I find the version of my SinusBot?  { #what-is-my-version}
 
 !!! success ""
