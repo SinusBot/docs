@@ -38,7 +38,7 @@ Afterwards set `YoutubeDLPath = "/opt/sinusbot/youtube-dl"` in your `config.ini`
 If you want youtube-dl to be updated automatically you can add a cronjob that does this by executing:
 
 ```bash
-echo "0 0 * * * sinusbot /opt/sinusbot/youtube-dl -U --restrict-filename >/dev/null" > /etc/cron.d/ytdl
+echo "0 0 * * * sinusbot /opt/sinusbot/youtube-dl -U --restrict-filenames >/dev/null" > /etc/cron.d/ytdl
 ```
 
 ### Troubleshooting
@@ -53,15 +53,15 @@ Try downloading something in your SinusBot web-interface on the "Upload" page an
 
 #### Signature extraction failed
 
-- Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
+Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
 
 #### Download Failed
 
-- Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
+Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
 
 #### invalid character 'W' looking for beginning of value
 
-- Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
+Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
 
 #### HTTP error 429: Too many requests
 
@@ -74,3 +74,12 @@ This is neither a bug in youtube-dl nor the SinusBot. This error means that **Yo
 Unfortunately there is nothing else that you could do other than trying to force IPv4 (as described above) or trying to use a different IP-address.
 
 *Note: youtube-dl has [network options](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#network-options) such as `--source-address <ip>` to select the correct ip-address in case your server has more than one and `--proxy <url>` that you can use to route requests over another server with a http(s)/socks proxy, however we will **not** help you with configuring this as it has nothing to do with the SinusBot itself.*
+
+#### Assuming --restrict-filenames since file system encoding cannot encode all characters. Set the LC_ALL environment variable to fix this. { #assuming-restrict-filenames data-toc-label='Assuming --restrict-filenames since file system encoding cannot encode all characters' }
+
+This is only a warning, not an error, however you can you can solve it by setting your system locale to something ending in `UTF-8`.
+
+On Debian/Ubuntu you can set your locale with: `dpkg-reconfigure locales`<br>
+Select something (use the arrow keys to navigate and ++space++ to select/deselect items) that ends in `UTF-8`, e.g. `en_US.UTF-8` and confirm your selection (++tab++ switches the highlighted button/field and ++enter++ activates it).
+
+Afterwards restart your system or your SinusBot to make sure that the changes are applied.
