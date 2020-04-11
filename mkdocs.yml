@@ -2,6 +2,8 @@ site_name: SinusBot Documentation
 site_url: https://sinusbot.github.io/docs/
 copyright: 'Copyright &copy; The SinusBot Team and Contributors.'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
+repo_name: SinusBot/docs
+repo_url: https://github.com/SinusBot/docs/
 nav:
   - 'Introduction': 'index.md'
   - 'Installation':
@@ -26,13 +28,18 @@ nav:
   - 'Text-to-Speech': 'tts.md'
   - 'Speech Recognition': 'speechrecognition.md'
 theme:
-  name: 'material'
+  name: material
   font: false
-  logo: 'logo.svg'
-  favicon: 'https://sinusbot.github.io/favicon.ico'
+  logo: logo.svg
+  favicon: https://sinusbot.github.io/favicon.ico
+  features:
+    - instant
+#   - tabs
   palette:
     primary: 'red'
     accent: 'red'
+  icon:
+    repo: fontawesome/brands/github
 markdown_extensions: # see https://python-markdown.github.io/extensions/, https://facelessuser.github.io/pymdown-extensions/
   - codehilite
   - admonition
