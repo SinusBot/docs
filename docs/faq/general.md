@@ -47,7 +47,7 @@
 !!! success ""
     Yes, that's possible. The bot knows about several privileges that a user must have to do several kinds of actions. To make the bot recognize a TS user as a bot user, you can bind a TS account to a bot account on the Edit user page.
 
-    All available commands are listed at Settings -> Info -> Commands - including the required privileges to run them.
+    All available commands are listed at Settings -> Info -> Commands - including the required privileges to run them. Recent SinusBot versions also have a `!help` command.
 
 ### What's the maximum length/size of music files? { #max-file-size data-toc-label='Max. file size?' }
 
