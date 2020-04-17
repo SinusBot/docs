@@ -61,6 +61,17 @@ If your error message includes one of the following:
 
 Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
 
+#### HTTP Error 403: Forbidden { #error-403 }
+
+Remove the signature cache:
+
+```bash
+su sinusbot
+/opt/sinusbot/youtube-dl --rm-cache-dir
+```
+
+and then try again.
+
 #### HTTP Error 429: Too Many Requests or 402: Payment Required { #error-429 }
 
 These two error codes indicate that the service (for example YouTube) is blocking your IP address because of overuse. Usually this is a soft block, meaning that you can gain access again after solving a CAPTCHA. Please [read the youtube-dl FAQ section](https://github.com/ytdl-org/youtube-dl#http-error-429-too-many-requests-or-402-payment-required) for more details.
