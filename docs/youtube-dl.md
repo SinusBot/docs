@@ -51,26 +51,28 @@ Make sure that the `YoutubeDLPath` in your `config.ini` is set to the correct pa
 
 Try downloading something in your SinusBot web-interface on the "Upload" page and check what it shows in the list. "youtube-dl unavailable" indicates that youtube-dl is not installed correctly; In that case reinstall it as shown above.
 
-#### Signature extraction failed
+#### Outdated youtube-dl
+
+If your error message includes one of the following:
+
+- Signature extraction failed
+- Download Failed
+- invalid character 'W' looking for beginning of value
 
 Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
 
-#### Download Failed
+#### HTTP Error 429: Too Many Requests or 402: Payment Required { #error-429 }
 
-Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
+These two error codes indicate that the service (for example YouTube) is blocking your IP address because of overuse. Usually this is a soft block, meaning that you can gain access again after solving a CAPTCHA. Please [read the youtube-dl FAQ section](https://github.com/ytdl-org/youtube-dl#http-error-429-too-many-requests-or-402-payment-required) for more details.
 
-#### invalid character 'W' looking for beginning of value
-
-Try updating youtube-dl: `/opt/sinusbot/youtube-dl -U`
-
-#### HTTP error 429: Too many requests
+While **this is not a bug**, you could at least try the following if you use an IPv6 address:
 
 Create the file `/etc/youtube-dl.conf` with the content `--force-ipv4` and then try again. </br>
 You can do this easily with the following command: `echo "--force-ipv4" >> /etc/youtube-dl.conf`
 
 If you still receive this error afterwards:
 
-This is neither a bug in youtube-dl nor the SinusBot. This error means that **YouTube** is limiting your IP-address. </br>
+This is neither a bug in youtube-dl nor the SinusBot. This error means that **YouTube** is limiting your IP-address.
 Unfortunately there is nothing else that you could do other than trying to force IPv4 (as described above) or trying to use a different IP-address.
 
 *Note: youtube-dl has [network options](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#network-options) such as `--source-address <ip>` to select the correct ip-address in case your server has more than one and `--proxy <url>` that you can use to route requests over another server with a http(s)/socks proxy, however we will **not** help you with configuring this as it has nothing to do with the SinusBot itself.*
