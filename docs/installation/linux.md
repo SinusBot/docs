@@ -6,7 +6,7 @@
 Make sure that your OS (Operating System) is up-to-date.
 We recommend recent LTS releases such as **Ubuntu 18.04** or **Debian 10** (buster), minimal required versions:
 
-- Debian 8+
+- Debian 9+
 - Ubuntu 16.10+
 - CentOS 7+
 
