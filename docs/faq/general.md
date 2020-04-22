@@ -100,7 +100,7 @@
 
     * Make sure you use an up to date version of:
         * Linux (Ubuntu 16.10+, Debian 8+, CentOS 7+ or better)
-        * Windows (7, 8, 10, Server 2008, 2012 or better), with all latest Updates / Service Packs
+        * Windows (10, Server 2012 or better), with all latest Updates / Service Packs
     * Make sure you have the latest SinusBot version
     * Make sure you use a valid license for Teamspeak / a valid hosting provider with legal licenses.
 
@@ -116,7 +116,7 @@
 
     * Stelle sicher, dass du eine aktuelle Betriebssystem Version verwendest:
         * Linux (Ubuntu 16.10+, Debian 8+, CentOS 7+ oder besser)
-        * Windows (7, 8, 10, Server 2008, 2012 oder besser), mit allen Updates / Service Packs
+        * Windows (10, Server 2012 oder besser), mit allen Updates / Service Packs
     * Stelle sicher, dass du die aktuellste SinusBot Version hast
     * Stelle sicher das du eine gültige Teamspeak Lizenz verwendest, bzw dein Teamspeak Hoster sich an die Teamspeak Richtlinien hält.
 
