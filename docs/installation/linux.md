@@ -107,7 +107,7 @@ Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
 # set the current/supported TS3 version here
-VERSION="3.3.2"
+VERSION="3.5.2"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
@@ -239,7 +239,7 @@ The update process is the same as the installation, we simply download and unpac
 
 ```bash
 # set the current/supported TS3 version here
-VERSION="3.3.2"
+VERSION="3.5.2"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
