@@ -218,7 +218,7 @@ Troubleshooting:
 
 *Note: The following instructions assume that you've followed this guide - otherwise you might need to slightly adapt the commands to fit your installation.*
 
-Before continuing you should install the dependencies mentioned at the beginning of the "Manual installation" section.
+Before continuing you should [install the dependencies mentioned at the beginning of the "Manual installation" section](#manual-installation).
 
 The update process is the same as the installation, we simply download and unpack the new SinusBot version over the old one.
 
@@ -237,13 +237,22 @@ cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
 chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
+Afterwards, start the SinusBot again (e.g. `systemctl start sinusbot`)
+
+Note: When updating the SinusBot, you should also [Update the TeamSpeak Client](#update-the-teamspeak-client).
+
 #### Update the TeamSpeak Client
 
-Before continuing you should install the dependencies mentioned at the beginning of the "Manual installation" section.
+Before continuing you should [install the dependencies mentioned at the beginning of the "Manual installation" section](#manual-installation).
 
 The update process is the same as the installation, we simply download and unpack the new TeamSpeak Client over the old one.
 
+First stop your sinusbot (e.g. `systemctl stop sinusbot` if you use the systemd-startscript) and then run the following commands:
+
 ```bash
+# go into the sinusbot directory
+cd /opt/sinusbot
+
 # set the current/supported TS3 version here
 VERSION="3.5.2"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
@@ -270,6 +279,8 @@ cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
 chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
+Afterwards, start the SinusBot again (e.g. `systemctl start sinusbot`)
+
 ### Migrating to another System
 
 First, install the SinusBot on the new system according to our guides.
@@ -293,6 +304,9 @@ Logs can be viewed using `journalctl -u sinusbot -f --since "2 hours ago"`.
 The SinusBot itself is closed-source, but some of the resources are open-source and available in the [SinusBot GitHub Organization](https://github.com/SinusBot) - contributions welcome.
 
 - [Documentation](https://github.com/SinusBot/docs)
+- [Scripting Documentation](https://github.com/SinusBot/scripting-docs)
 - [Linux-Installer](https://github.com/SinusBot/installer-linux)
 - [Startscript](https://github.com/SinusBot/linux-startscript)
+- [Default SinusBot Scripts](https://github.com/SinusBot/scripts/tree/master/default-attached)
+- [SinusBot Docker Image](https://github.com/SinusBot/docker)
 - and more!
