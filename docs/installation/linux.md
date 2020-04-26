@@ -155,6 +155,8 @@ Just to make sure that the bot is executable, enter
 chmod 755 sinusbot
 ```
 
+(optional) To enable playback support for YouTube URLs and several other sites, we recommend [installing youtube-dl](https://sinusbot.github.io/docs/youtube-dl/#linux).
+
 ### Usage
 
 As [the bot won't run as root](https://sinusbot.github.io/docs/faq/installation/#why-cant-i-run-the-bot-as-root) you will need to switch to the user that you have installed the bot on, if you followed the tutorial, this will be 'sinusbot". To do this use the following command:
@@ -171,7 +173,7 @@ Starting the bot
 
 Stopping the bot with ++ctrl+c++
 
-!!! Info "If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using_a_startscript)."
+!!! Info "If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using-a-startscript)."
 
 Now login at `http://<your ip>:8087/` with user **admin** and the password provided on first run. (see [FAQ](https://sinusbot.github.io/docs/faq/installation/#what-is-the-default-username-and-password) on how to reset)
 
