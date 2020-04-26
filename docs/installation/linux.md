@@ -207,6 +207,10 @@ Enable autostart (optional): `systemctl enable sinusbot`
 
 Start the sinusbot: `systemctl start sinusbot`
 
+Troubleshooting:
+
+- This requires you to have systemd as default; You can check this with `grep "Name" /proc/1/status` - It should return: `Name: systemd`. If you do not have systemd, [install systemd](https://wiki.debian.org/systemd#Installation) and then [set systemd as default](https://wiki.debian.org/systemd#Configuring_as_default).
+- To see the log and check for errors you can use `systemctl status sinusbot` and `journalctl -u sinusbot -f`.
 
 ### Update
 
