@@ -10,7 +10,7 @@ We recommend recent LTS releases such as **Ubuntu 20.04** or **Debian 10** (bust
 - Ubuntu 18.04+
 - CentOS 7+
 
-*Note: While it might be possible to use older versions particular cases, we can only provide support for the above mentioned ones.*
+*Note: While it might be possible to use older versions in particular cases, we can only provide support for the above mentioned ones.*
 
 When choosing a VPS (virtual private server), make sure that it is **not** based on OpenVZ, because the Linux kernel will be too old. Instead choose a **KVM** or **LCX** based VPS with a recent OS.
 
