@@ -11,6 +11,8 @@ Be sure that "TeamSpeak 3 Support" is checked, as shown in the following picture
 If the option is not available then the installer could not find a compatible TeamSpeak Client (see step 1).
 If you continue installation without this checkbox enabled the SinusBot will only be able to connect to Discord.
 
+To Log in Double click the SinusBot logo in the tray (next to your clock at the bottom right of the screen) to login.
+
 ## Troubleshooting
 
 Look for any errors in the SinusBot/instance log and try to look-up solutions on our [forum](https://forum.sinusbot.com/) or your favorite search engine.
