@@ -107,7 +107,7 @@ Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
 # set the current/supported TS3 version here
-VERSION="3.5.2"
+VERSION="3.5.3"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
@@ -254,7 +254,7 @@ First stop your sinusbot (e.g. `systemctl stop sinusbot` if you use the systemd-
 cd /opt/sinusbot
 
 # set the current/supported TS3 version here
-VERSION="3.5.2"
+VERSION="3.5.3"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
