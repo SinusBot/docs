@@ -1,0 +1,1222 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://sinusbot.github.io/docs/scripts/">
+      
+      
+      <link rel="shortcut icon" href="https://sinusbot.github.io/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
+    
+    
+      
+        <title>Scripting - SinusBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-creating-scripts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://sinusbot.github.io/docs/" title="SinusBot Documentation" class="md-header-nav__button md-logo" aria-label="SinusBot Documentation">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SinusBot Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Scripting
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/SinusBot/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SinusBot/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://sinusbot.github.io/docs/" title="SinusBot Documentation" class="md-nav__button md-logo" aria-label="SinusBot Documentation">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    SinusBot Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/SinusBot/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SinusBot/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/windows/" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../youtube-dl/" title="youtube-dl" class="md-nav__link">
+      youtube-dl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Reverse Proxy
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Reverse Proxy" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Reverse Proxy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reverse-proxy/nginx/" title="NGINX" class="md-nav__link">
+      NGINX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reverse-proxy/apache2/" title="Apache 2" class="md-nav__link">
+      Apache 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reverse-proxy/common-adaptations/" title="Common Adaptations" class="md-nav__link">
+      Common Adaptations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/discord/" title="Discord" class="md-nav__link">
+      Discord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/increase-security-level/" title="Increase TS Security Level" class="md-nav__link">
+      Increase TS Security Level
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="FAQ" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/features/" title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../whatsnew/" title="What is new?" class="md-nav__link">
+      What is new?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Scripting
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Scripting" class="md-nav__link md-nav__link--active">
+      Scripting
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-a-script" class="md-nav__link">
+    How to install a script?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-a-script" class="md-nav__link">
+    Writing a script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-a-script-from-scratch" class="md-nav__link">
+    Writing a script from scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing a script from scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure-and-manifest" class="md-nav__link">
+    Basic structure and manifest
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic structure and manifest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-fields" class="md-nav__link">
+    Mandatory fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Mandatory fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-string" class="md-nav__link">
+    name (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-string" class="md-nav__link">
+    author (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description-string" class="md-nav__link">
+    description (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-string" class="md-nav__link">
+    version (string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-fields" class="md-nav__link">
+    Optional fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autorun-bool" class="md-nav__link">
+    autorun (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backends-string" class="md-nav__link">
+    backends ([]string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enableweb-bool" class="md-nav__link">
+    enableWeb (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engine-string" class="md-nav__link">
+    engine (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-bool" class="md-nav__link">
+    hidden (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requiredmodules-string" class="md-nav__link">
+    requiredModules ([]string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vars-array" class="md-nav__link">
+    vars (array)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voicecommands-string" class="md-nav__link">
+    voiceCommands ([]string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-setup-function" class="md-nav__link">
+    The Setup-Function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../licenses/" title="Licenses" class="md-nav__link">
+      Licenses
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../locales/" title="Localization" class="md-nav__link">
+      Localization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tts/" title="Text-to-Speech" class="md-nav__link">
+      Text-to-Speech
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../speechrecognition/" title="Speech Recognition" class="md-nav__link">
+      Speech Recognition
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-a-script" class="md-nav__link">
+    How to install a script?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-a-script" class="md-nav__link">
+    Writing a script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-a-script-from-scratch" class="md-nav__link">
+    Writing a script from scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing a script from scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure-and-manifest" class="md-nav__link">
+    Basic structure and manifest
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic structure and manifest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-fields" class="md-nav__link">
+    Mandatory fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Mandatory fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-string" class="md-nav__link">
+    name (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-string" class="md-nav__link">
+    author (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description-string" class="md-nav__link">
+    description (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-string" class="md-nav__link">
+    version (string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-fields" class="md-nav__link">
+    Optional fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autorun-bool" class="md-nav__link">
+    autorun (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backends-string" class="md-nav__link">
+    backends ([]string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enableweb-bool" class="md-nav__link">
+    enableWeb (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engine-string" class="md-nav__link">
+    engine (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-bool" class="md-nav__link">
+    hidden (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requiredmodules-string" class="md-nav__link">
+    requiredModules ([]string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vars-array" class="md-nav__link">
+    vars (array)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voicecommands-string" class="md-nav__link">
+    voiceCommands ([]string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-setup-function" class="md-nav__link">
+    The Setup-Function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/SinusBot/docs/edit/master/docs/scripts.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="using-creating-scripts">Using &amp; creating Scripts<a class="headerlink" href="#using-creating-scripts" title="Permanent link">🔗</a></h1>
+<p>Your bot can be extended by installing scripts from other users or by writing and activating your own scripts. Such scripts can react on several events and control how the bot should react to them.</p>
+<p>This can be a simple 'Hello' response when someone writes 'hello' to the bot or a pretty detailed leveling/XP system where the bot tracks the online time of each user. You can find many scripts from other users <a href="https://forum.sinusbot.com/resources/categories/scripts.2/">here</a>.</p>
+<p>The language the scripts have to be in is JavaScript (ECMAScript Version 5). Since version 1.0 you can now also use newer ES6 features.</p>
+<p>The full API documentation of the API that is available to you can be found <a href="https://sinusbot.github.io/scripting-docs/">here</a>.</p>
+<h2 id="how-to-install-a-script">How to install a script?<a class="headerlink" href="#how-to-install-a-script" title="Permanent link">🔗</a></h2>
+<p>When you download scripts manually, you should get files that end with .js. Copy those files into the scripts folder within the installation directory.</p>
+<blockquote>
+<p>A bot restart is required whenever you add or remove a script manually.</p>
+</blockquote>
+<p>Should you have downloaded a zip/rar or whatever file, make sure to unpack it first.</p>
+<blockquote>
+<p>Some scripts also come with more files than just the main script file. In such cases make sure you copy them exactly in the same structure as you've downloaded them (keeping all folders that came with the script). This is usually true for scripts that come with their own web interface.</p>
+</blockquote>
+<h2 id="writing-a-script">Writing a script<a class="headerlink" href="#writing-a-script" title="Permanent link">🔗</a></h2>
+<p>So you've searched for a script and found nothing that fully suits you, right? The best way to get started with writing a script is usually to have a look at other scripts first and try to understand how they work. If you for example want to have a custom welcome script, have a look at how the existing ones work and make slight adjustments instead of directly writing it from scratch.</p>
+<blockquote>
+<p>The source code of scripts should usually be readable so you can extend / modify them. Should you plan to publish changes to another script however, make sure you contact the original author and ask for permission.</p>
+</blockquote>
+<h2 id="writing-a-script-from-scratch">Writing a script from scratch<a class="headerlink" href="#writing-a-script-from-scratch" title="Permanent link">🔗</a></h2>
+<h3 id="basic-structure-and-manifest">Basic structure and manifest<a class="headerlink" href="#basic-structure-and-manifest" title="Permanent link">🔗</a></h3>
+<p>Every script must register itself using the <code>registerPlugin</code> function. This function takes two arguments:</p>
+<ul>
+<li>the manifest as an object</li>
+<li>the setup function of your script</li>
+</ul>
+<p>First, let's see what a manifest consists of. The manifest will determine which features are available to the script and also contain metadata and variables that will be shown in the web interface. It's also used to make sure the script works with the current version of the bot.</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">registerPlugin</span><span class="p">({</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Demo Script&#39;</span><span class="p">,</span>
+    <span class="nx">version</span><span class="o">:</span> <span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;This example actually does nothing&#39;</span><span class="p">,</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;your name &lt;your-email@example.com&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">vars</span><span class="o">:</span> <span class="p">[],</span>
+    <span class="nx">autorun</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">sinusbot</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">});</span>
+</code></pre></div>
+
+
+<h4 id="mandatory-fields">Mandatory fields<a class="headerlink" href="#mandatory-fields" title="Permanent link">🔗</a></h4>
+<h5 id="name-string">name (string)<a class="headerlink" href="#name-string" title="Permanent link">🔗</a></h5>
+<p>The name field should contain a short name of your script.</p>
+<h5 id="author-string">author (string)<a class="headerlink" href="#author-string" title="Permanent link">🔗</a></h5>
+<p>Put your name and your email address in here in the form of <code>your name &lt;your-email@example.com&gt;</code></p>
+<h5 id="description-string">description (string)<a class="headerlink" href="#description-string" title="Permanent link">🔗</a></h5>
+<p>This should contain a longer description - tell the user what exactly your script does.</p>
+<h5 id="version-string">version (string)<a class="headerlink" href="#version-string" title="Permanent link">🔗</a></h5>
+<p>Start with something like 1.0 and increase it with every release.</p>
+<h4 id="optional-fields">Optional fields<a class="headerlink" href="#optional-fields" title="Permanent link">🔗</a></h4>
+<h5 id="autorun-bool">autorun (bool)<a class="headerlink" href="#autorun-bool" title="Permanent link">🔗</a></h5>
+<p>Set to true, if you want the script to be run on every instance, without the option to disable it.</p>
+<h5 id="backends-string">backends ([]string)<a class="headerlink" href="#backends-string" title="Permanent link">🔗</a></h5>
+<p>Per default, scripts will only be available on TS3 instances. If your script supports Discord (or in the future maybe other backends) as well, you have to specify this explicitly by setting this variable to an array containing all backends like so: <code>backends: ["ts3", "discord"]</code></p>
+<h5 id="enableweb-bool">enableWeb (bool)<a class="headerlink" href="#enableweb-bool" title="Permanent link">🔗</a></h5>
+<p>If your script required own web content, you can set enableWeb to true and put files into the ./scripts/scriptname/html directory. After restart, the script title will be clickable and lead to an index.html inside that html-directory you just created.</p>
+<p>From there you have access to the localStorage variables containing the login and may communicate with the bot api from your own pages.</p>
+<h5 id="engine-string">engine (string)<a class="headerlink" href="#engine-string" title="Permanent link">🔗</a></h5>
+<p>Sets the required engine version (bot version). This uses <a href="http://semver.org">Semantic Versioning</a>. Example: <code>&gt;= 0.9.16</code></p>
+<h5 id="hidden-bool">hidden (bool)<a class="headerlink" href="#hidden-bool" title="Permanent link">🔗</a></h5>
+<p>Hides the script from the settings page. Should be used together with <code>autorun</code>.</p>
+<blockquote>
+<p>Hidden scripts can not have variables (vars), since they'd never be shown and thus not configurable.</p>
+</blockquote>
+<h5 id="requiredmodules-string">requiredModules ([]string)<a class="headerlink" href="#requiredmodules-string" title="Permanent link">🔗</a></h5>
+<p>Using this, you can define which restricted modules the script wants to use. The script has to be re-enabled by the user if the required modules change. This field is mandatory if you use any restricted module from version 1.0 onward.</p>
+<h5 id="vars-array">vars (array)<a class="headerlink" href="#vars-array" title="Permanent link">🔗</a></h5>
+<p>This is probably the most complex parameter as this defines the configuration interface that will be shown on the web interface of the bot.</p>
+<p>Current available variable types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Show a regular input element where the user can enter some text</td>
+</tr>
+<tr>
+<td>password</td>
+<td>like string but doesn't display the text you've entered</td>
+</tr>
+<tr>
+<td>strings</td>
+<td>set multiple strings</td>
+</tr>
+<tr>
+<td>multiline</td>
+<td>this will display a text area where the user can enter several lines of text</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Show a regular input element, but only accept numeric input from the user</td>
+</tr>
+<tr>
+<td>track</td>
+<td _A="&quot;A" _title_:="&quot;title&quot;:" _track:_uuid_="&quot;track://uuid&quot;," _url_:="&quot;url&quot;:" of="of" short="short" the="the" title="title" track_="track&quot;">%%Show an input where the user can search and specify a track that has been uploaded to the bot - the config variable will later on contain an object like this: </td>
+</tr>
+<tr>
+<td>tracks</td>
+<td>select multiple tracks</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>If the bot is connected, this displays a channel selector. The config variable will later on hold the channel-id of the selected channel</td>
+</tr>
+<tr>
+<td>select</td>
+<td>this will display a select box. All options need to specified in an array called options and the config value will later on hold the index to the selected option.</td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td>this will display a checkbox</td>
+</tr>
+<tr>
+<td>array</td>
+<td>this allows the user to add an unspecified amount of items</td>
+</tr>
+</tbody>
+</table>
+<p>Example of the string type usage:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;ExampleName&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;message type&#39;</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="nx">placeholder</span><span class="o">:</span> <span class="s1">&#39;Some example placeholder&#39;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Example of the select type usage:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;fooType&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Variations of foobar&#39;</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;select&#39;</span><span class="p">,</span>
+    <span class="nx">options</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Foo&#39;</span><span class="p">,</span> <span class="s1">&#39;Bar&#39;</span><span class="p">,</span> <span class="s1">&#39;Foobar&#39;</span><span class="p">,</span> <span class="s1">&#39;Barfoo&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Example of the condition type with the above options example:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;fooSwitch&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Selected fooType&#39;</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;select&#39;</span><span class="p">,</span>
+    <span class="nx">conditions</span><span class="o">:</span> <span class="p">[{</span>        <span class="c1">//make a field visible or invisible in the config with conditions</span>
+        <span class="nx">field</span><span class="o">:</span> <span class="s1">&#39;fooType&#39;</span><span class="p">,</span> <span class="c1">//this will tell to use the config field with the name &quot;fooType&quot;</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>         <span class="c1">//this will tell to use the 3rd index of the options of the selected type in this case &quot;Foobar&quot;</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>You can print these values in the log by using:</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">engine</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">ExampleName</span><span class="p">);</span>
+<span class="nx">engine</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">fooType</span><span class="p">);</span>
+</code></pre></div>
+
+
+<h5 id="voicecommands-string">voiceCommands ([]string)<a class="headerlink" href="#voicecommands-string" title="Permanent link">🔗</a></h5>
+<p>This parameter is only used for the speech recognition feature and may contain one or more strings that are to be detected for the given script.
+Note that the speech recognition only works with licensed instances.
+You can find more details on how to use it <a href="../speechrecognition">here</a>.</p>
+<h3 id="the-setup-function">The Setup-Function<a class="headerlink" href="#the-setup-function" title="Permanent link">🔗</a></h3>
+<p>Following the manifest, you hand over a function to registerPlugin that will be called upon activation with two or more parameters. The first one, <code>sinusbot</code>, can be ignored if you use the new scripting engine. The second one will hold the configuration of the plugin that the user set from within the web interface (given you have added anything to the <code>vars</code> field of your script manifest).</p>
+<p>Use this function to setup event listeners and do stuff on initialization.</p>
+<p>Example</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">registerPlugin</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">sinusbot</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">event</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">);</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">chatEvent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Do something...</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+
+
+<p>As said, the function will get called once the script gets activated either by enabling it in the web interface or when autorun is enabled.
+In this example an event handler is installed that will be called whenever a chat message has been sent.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../whatsnew/" title="What is new?" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                What is new?
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../configuration/" title="Configuration" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Configuration
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; The SinusBot Team and Contributors.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://sinusbot.com" target="_blank" rel="noopener" title="sinusbot.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/SinusBot" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/sinusbot" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.facebook.com/sinusbot" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://forum.sinusbot.com" target="_blank" rel="noopener" title="forum.sinusbot.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

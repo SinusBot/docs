@@ -1,0 +1,1198 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://sinusbot.github.io/docs/installation/linux/">
+      
+      
+      <link rel="shortcut icon" href="https://sinusbot.github.io/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
+    
+    
+      
+        <title>Linux - SinusBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://sinusbot.github.io/docs/" title="SinusBot Documentation" class="md-header-nav__button md-logo" aria-label="SinusBot Documentation">
+      
+  <img src="../../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SinusBot Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Linux
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/SinusBot/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SinusBot/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://sinusbot.github.io/docs/" title="SinusBot Documentation" class="md-nav__button md-logo" aria-label="SinusBot Documentation">
+      
+  <img src="../../logo.svg" alt="logo">
+
+    </a>
+    SinusBot Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/SinusBot/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SinusBot/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linux
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Linux" class="md-nav__link md-nav__link--active">
+      Linux
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compatible-versions" class="md-nav__link">
+    Compatible Versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installer-script" class="md-nav__link">
+    Installer Script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-installation" class="md-nav__link">
+    Manual installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-startscript" class="md-nav__link">
+    Using a startscript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update
+  </a>
+  
+    <nav class="md-nav" aria-label="Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-the-sinusbot" class="md-nav__link">
+    Update the SinusBot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-the-teamspeak-client" class="md-nav__link">
+    Update the TeamSpeak Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrating-to-another-system" class="md-nav__link">
+    Migrating to another System
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows/" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../youtube-dl/" title="youtube-dl" class="md-nav__link">
+      youtube-dl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Reverse Proxy
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Reverse Proxy" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Reverse Proxy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reverse-proxy/nginx/" title="NGINX" class="md-nav__link">
+      NGINX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reverse-proxy/apache2/" title="Apache 2" class="md-nav__link">
+      Apache 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reverse-proxy/common-adaptations/" title="Common Adaptations" class="md-nav__link">
+      Common Adaptations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../discord/" title="Discord" class="md-nav__link">
+      Discord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../increase-security-level/" title="Increase TS Security Level" class="md-nav__link">
+      Increase TS Security Level
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="FAQ" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/features/" title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../whatsnew/" title="What is new?" class="md-nav__link">
+      What is new?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../scripts/" title="Scripting" class="md-nav__link">
+      Scripting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../licenses/" title="Licenses" class="md-nav__link">
+      Licenses
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../locales/" title="Localization" class="md-nav__link">
+      Localization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tts/" title="Text-to-Speech" class="md-nav__link">
+      Text-to-Speech
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../speechrecognition/" title="Speech Recognition" class="md-nav__link">
+      Speech Recognition
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compatible-versions" class="md-nav__link">
+    Compatible Versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installer-script" class="md-nav__link">
+    Installer Script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-installation" class="md-nav__link">
+    Manual installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-startscript" class="md-nav__link">
+    Using a startscript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update
+  </a>
+  
+    <nav class="md-nav" aria-label="Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-the-sinusbot" class="md-nav__link">
+    Update the SinusBot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-the-teamspeak-client" class="md-nav__link">
+    Update the TeamSpeak Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrating-to-another-system" class="md-nav__link">
+    Migrating to another System
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/SinusBot/docs/edit/master/docs/installation/linux.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Linux</h1>
+                
+                <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">🔗</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">The TeamSpeak Client 3.3+ requires at least a Linux Kernel of version 3.17 or higher!</p>
+<p>You can check your Linux Kernel version with <code>uname -a</code>.</p>
+</div>
+<p>Make sure that your OS (Operating System) is up-to-date.
+We recommend recent LTS releases such as <strong>Ubuntu 20.04</strong> or <strong>Debian 10</strong> (buster), minimal required versions:</p>
+<ul>
+<li>Debian 9+</li>
+<li>Ubuntu 18.04+</li>
+<li>CentOS 7+</li>
+</ul>
+<p><em>Note: While it might be possible to use older versions in particular cases, we can only provide support for the above mentioned ones.</em></p>
+<p>When choosing a VPS (virtual private server), make sure that it is <strong>not</strong> based on OpenVZ, because the Linux kernel will be too old. Instead choose a <strong>KVM</strong> or <strong>LCX</strong> based VPS with a recent OS.</p>
+<p>The server should have <em>at least</em> 512MB or 1GB of free RAM.
+Although the SinusBot itself doesn't require much RAM, the TeamSpeak Client(s) often take up the most memory.</p>
+<p>Make sure that the server has enough free disk space to fit your needs.</p>
+<h4 id="compatible-versions">Compatible Versions<a class="headerlink" href="#compatible-versions" title="Permanent link">🔗</a></h4>
+<table>
+<thead>
+<tr>
+<th>SinusBot Version</th>
+<th>TS3 Client Version</th>
+<th>Linux Kernel Version</th>
+<th>TeamSpeak Server Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0-beta3 and later</td>
+<td>3.3+</td>
+<td>3.17+</td>
+<td>&gt;= 3.8.x</td>
+</tr>
+<tr>
+<td>1.0.0-beta2, 1.0.0-beta1</td>
+<td>3.2.5</td>
+<td>2.6+</td>
+<td>&lt;= 3.9.x</td>
+</tr>
+</tbody>
+</table>
+<p>Please note that we do not support old beta releases. See <a href="https://sinusbot.github.io/docs/faq/general/#support-policy">Support Policy / Support Grundregeln</a>.</p>
+<h2 id="installer-script">Installer Script<a class="headerlink" href="#installer-script" title="Permanent link">🔗</a></h2>
+<p>If you are new to Linux and/or wish to have everything installed for you in a more convenient way, we encourage you to use the <a href="https://sinusbot.github.io/installer/">Installer Script</a>.</p>
+<h2 id="manual-installation">Manual installation<a class="headerlink" href="#manual-installation" title="Permanent link">🔗</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">The TeamSpeak Client 3.3+ requires at least a Linux Kernel of version 3.17 or higher!</p>
+<p>You can check your Linux Kernel version with <code>uname -a</code>.</p>
+</div>
+<p>Let's start by installing several dependencies:</p>
+<div class="codehilite"><pre><span></span><code>apt-get update
+apt-get install -y x11vnc xvfb libxcursor1 ca-certificates curl bzip2 libnss3 libegl1-mesa x11-xkb-utils libasound2 libpci3 libxslt1.1 libxkbcommon0 libxss1 libxcomposite1
+update-ca-certificates
+</code></pre></div>
+
+
+<p>On Debian and some Ubuntu versions you might as well have to install, so at least try:</p>
+<div class="codehilite"><pre><span></span><code>apt-get install libglib2.0-0
+</code></pre></div>
+
+
+<p><strong>In case of Ubuntu 18.04</strong>: Depending on the Ubuntu installation the <code>universe</code> repository of Ubuntu is not activated, resulting in missing packages for required dependencies <em>x11vnc</em> and <em>xvfb</em>. When said problem occurs, enable the <code>universe</code> repository by using following command:</p>
+<div class="codehilite"><pre><span></span><code>add-apt-repository universe
+apt-get update
+</code></pre></div>
+
+
+<p>After all required dependencies are installed, let's assume that you're going to install the bot to <code>/opt/sinusbot</code> and are using the user <code>sinusbot</code> with the group <code>sinusbot</code>. We will install the bot with root then switch to this user account when running the bot.</p>
+<p>You will need to create an new user <code>sinusbot</code> on your server, so to do so type the following command.</p>
+<div class="codehilite"><pre><span></span><code>adduser --disabled-login sinusbot
+</code></pre></div>
+
+
+<p>This created user is used to start the bot with usual user privileges (which is highly recommended!), as the bot should <strong>not</strong> run as root for security-reasons.</p>
+<p>Next we will create and prepare the folder where Sinusbot will be installed to, by issuing following commands as the root user:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># create folder</span>
+mkdir -p /opt/sinusbot
+<span class="c1"># grant sinusbot user permissions on specified folder</span>
+chown -R sinusbot:sinusbot /opt/sinusbot
+</code></pre></div>
+
+
+<p>(If you're using another user/group than "sinusbot", replace sinusbot:sinusbot with <strong>yourusername:yourusergroup</strong>)</p>
+<p>Then we will switch over to the recently created user dedicated for the sinusbot, change the working directory and to download the latest Sinusbot release:</p>
+<div class="codehilite"><pre><span></span><code>su sinusbot
+<span class="nb">cd</span> /opt/sinusbot
+wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
+</code></pre></div>
+
+
+<p>If that command results in SSL-Errors, you can <strong>alternatively</strong> try</p>
+<div class="codehilite"><pre><span></span><code>curl -O https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
+</code></pre></div>
+
+
+<p>Next, extract the bot:</p>
+<div class="codehilite"><pre><span></span><code>tar -xjf sinusbot.current.tar.bz2
+</code></pre></div>
+
+
+<p>Copy the configuration (if you haven't started the bot before)</p>
+<div class="codehilite"><pre><span></span><code>cp config.ini.dist config.ini
+</code></pre></div>
+
+
+<p>Now you need to download the TeamSpeak 3 Client and <strong>install it</strong>.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># set the current/supported TS3 version here</span>
+<span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;3.5.3&quot;</span>
+wget https://files.teamspeak-services.com/releases/client/<span class="nv">$VERSION</span>/TeamSpeak3-Client-linux_amd64-<span class="nv">$VERSION</span>.run
+chmod <span class="m">0755</span> TeamSpeak3-Client-linux_amd64-<span class="nv">$VERSION</span>.run
+./TeamSpeak3-Client-linux_amd64-<span class="nv">$VERSION</span>.run
+</code></pre></div>
+
+
+<p>You will need to accept the terms by pressing: <span class="keys"><kbd class="key-enter">Enter</kbd></span>, <span class="keys"><kbd class="key-q">Q</kbd></span>, <span class="keys"><kbd class="key-y">Y</kbd></span>, <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>Afterwards you can delete the file: <code>rm TeamSpeak3-Client-linux_amd64-$VERSION.run</code></p>
+<p>Now you need to configure the ini-File of the bot to match your directories.</p>
+<div class="codehilite"><pre><span></span><code>nano config.ini
+</code></pre></div>
+
+
+<p>Make sure that the TS3Path is correct (if you followed this tutorial step by step, it should already match):</p>
+<div class="codehilite"><pre><span></span><code><span class="n">TS3Path</span> <span class="o">=</span> <span class="s">&quot;/opt/sinusbot/TeamSpeak3-Client-linux_amd64/ts3client_linux_amd64&quot;</span>
+</code></pre></div>
+
+
+<p>Close the editor (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>, <span class="keys"><kbd class="key-enter">Enter</kbd></span>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-x">X</kbd></span>).</p>
+<p>Remove the file 'libqxcb-glx-integration.so' from the clients 'xcbglintegrations' directory:</p>
+<div class="codehilite"><pre><span></span><code>rm TeamSpeak3-Client-linux_amd64/xcbglintegrations/libqxcb-glx-integration.so
+</code></pre></div>
+
+
+<p>Create the plugins folder in the ts3client directory:</p>
+<div class="codehilite"><pre><span></span><code>mkdir TeamSpeak3-Client-linux_amd64/plugins
+</code></pre></div>
+
+
+<p>And finally copy the plugin to the plugins-directory of the TeamSpeak-Installation</p>
+<div class="codehilite"><pre><span></span><code>cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
+</code></pre></div>
+
+
+<p>Just to make sure that the bot is executable, enter</p>
+<div class="codehilite"><pre><span></span><code>chmod <span class="m">755</span> sinusbot
+</code></pre></div>
+
+
+<p>(optional) To enable playback support for YouTube URLs and several other sites, we recommend <a href="https://sinusbot.github.io/docs/youtube-dl/#linux">installing youtube-dl</a>.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">🔗</a></h3>
+<p>As <a href="https://sinusbot.github.io/docs/faq/installation/#why-cant-i-run-the-bot-as-root">the bot won't run as root</a> you will need to switch to the user that you have installed the bot on, if you followed the tutorial, this will be 'sinusbot". To do this use the following command:</p>
+<div class="codehilite"><pre><span></span><code>su sinusbot
+</code></pre></div>
+
+
+<p>Starting the bot</p>
+<div class="codehilite"><pre><span></span><code>./sinusbot
+</code></pre></div>
+
+
+<p>Stopping the bot with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span></p>
+<div class="admonition info">
+<p class="admonition-title">If you want to keep the bot running when you exit out of the terminal follow the instruction on how to <a href="#using-a-startscript">install a startscript</a>.</p>
+</div>
+<p>Now login at <code>http://&lt;your ip&gt;:8087/</code> with user <strong>admin</strong> and the password provided on first run. (see <a href="https://sinusbot.github.io/docs/faq/installation/#what-is-the-default-username-and-password">FAQ</a> on how to reset)</p>
+<h3 id="using-a-startscript">Using a startscript<a class="headerlink" href="#using-a-startscript" title="Permanent link">🔗</a></h3>
+<p><em>These instructions need to be done as the <code>root</code> user.</em></p>
+<p>Download the startscript:</p>
+<div class="codehilite"><pre><span></span><code>curl -o /lib/systemd/system/sinusbot.service https://raw.githubusercontent.com/SinusBot/linux-startscript/master/sinusbot.service
+</code></pre></div>
+
+
+<p>Then edit the file:</p>
+<div class="codehilite"><pre><span></span><code>nano /lib/systemd/system/sinusbot.service
+</code></pre></div>
+
+
+<p>And replace the following placeholders to match your installation:</p>
+<table>
+<thead>
+<tr>
+<th>placeholder</th>
+<th>description</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YOUR_USER</td>
+<td>Your user who starts the bot</td>
+<td>sinusbot</td>
+</tr>
+<tr>
+<td>YOURPATH_TO_THE_BOT_BINARY</td>
+<td>Your path to the SinusBot binary</td>
+<td>/opt/sinusbot/sinusbot</td>
+</tr>
+<tr>
+<td>YOURPATH_TO_THE_BOT</td>
+<td>Your path to the SinusBot install directory</td>
+<td>/opt/sinusbot</td>
+</tr>
+</tbody>
+</table>
+<p>Reload systemd: <code>systemctl daemon-reload</code></p>
+<p>Enable autostart (optional): <code>systemctl enable sinusbot</code></p>
+<p>Start the sinusbot: <code>systemctl start sinusbot</code></p>
+<p>Troubleshooting:</p>
+<ul>
+<li>This requires you to have systemd as default; You can check this with <code>grep "Name" /proc/1/status</code> - It should return: <code>Name: systemd</code>. If you do not have systemd, <a href="https://wiki.debian.org/systemd#Installation">install systemd</a> and then <a href="https://wiki.debian.org/systemd#Configuring_as_default">set systemd as default</a>.</li>
+<li>To see the log and check for errors you can use <code>systemctl status sinusbot</code> and <code>journalctl -u sinusbot -f</code>.</li>
+</ul>
+<h3 id="update">Update<a class="headerlink" href="#update" title="Permanent link">🔗</a></h3>
+<h4 id="update-the-sinusbot">Update the SinusBot<a class="headerlink" href="#update-the-sinusbot" title="Permanent link">🔗</a></h4>
+<p><em>Note: The following instructions assume that you've followed this guide - otherwise you might need to slightly adapt the commands to fit your installation.</em></p>
+<p>Before continuing you should <a href="#manual-installation">install the dependencies mentioned at the beginning of the "Manual installation" section</a>.</p>
+<p>The update process is the same as the installation, we simply download and unpack the new SinusBot version over the old one.</p>
+<p>First stop your sinusbot (e.g. <code>systemctl stop sinusbot</code> if you use the systemd-startscript) and then run the following commands:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># go into the sinusbot directory</span>
+<span class="nb">cd</span> /opt/sinusbot
+<span class="c1"># download the current release</span>
+wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
+<span class="c1"># unpack it</span>
+tar -xjvf sinusbot.current.tar.bz2
+<span class="c1"># copy the plugin</span>
+cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
+<span class="c1"># fix the file permissions if you&#39;re doing this as root</span>
+chown -R sinusbot:sinusbot /opt/sinusbot
+</code></pre></div>
+
+
+<p>Afterwards, start the SinusBot again (e.g. <code>systemctl start sinusbot</code>)</p>
+<p>Note: When updating the SinusBot, you should also <a href="#update-the-teamspeak-client">Update the TeamSpeak Client</a>.</p>
+<h4 id="update-the-teamspeak-client">Update the TeamSpeak Client<a class="headerlink" href="#update-the-teamspeak-client" title="Permanent link">🔗</a></h4>
+<p>Before continuing you should <a href="#manual-installation">install the dependencies mentioned at the beginning of the "Manual installation" section</a>.</p>
+<p>The update process is the same as the installation, we simply download and unpack the new TeamSpeak Client over the old one.</p>
+<p>First stop your sinusbot (e.g. <code>systemctl stop sinusbot</code> if you use the systemd-startscript) and then run the following commands:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># go into the sinusbot directory</span>
+<span class="nb">cd</span> /opt/sinusbot
+
+<span class="c1"># set the current/supported TS3 version here</span>
+<span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;3.5.3&quot;</span>
+wget https://files.teamspeak-services.com/releases/client/<span class="nv">$VERSION</span>/TeamSpeak3-Client-linux_amd64-<span class="nv">$VERSION</span>.run
+chmod <span class="m">0755</span> TeamSpeak3-Client-linux_amd64-<span class="nv">$VERSION</span>.run
+./TeamSpeak3-Client-linux_amd64-<span class="nv">$VERSION</span>.run
+</code></pre></div>
+
+
+<p>You will need to accept the terms by pressing: <span class="keys"><kbd class="key-enter">Enter</kbd></span>, <span class="keys"><kbd class="key-q">Q</kbd></span>, <span class="keys"><kbd class="key-y">Y</kbd></span>, <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>Afterwards you can delete the file: <code>rm TeamSpeak3-Client-linux_amd64-$VERSION.run</code></p>
+<p>Now remove the <code>data/ts3</code> directory and the <code>libqxcb-glx-integration.so</code> file as well:</p>
+<div class="codehilite"><pre><span></span><code>rm -rf data/ts3
+rm TeamSpeak3-Client-linux_amd64/xcbglintegrations/libqxcb-glx-integration.so
+</code></pre></div>
+
+
+<p>And finally copy the plugin to the plugins-directory of the TeamSpeak-Installation</p>
+<div class="codehilite"><pre><span></span><code>cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
+<span class="c1"># fix the file permissions if you&#39;re doing this as root</span>
+chown -R sinusbot:sinusbot /opt/sinusbot
+</code></pre></div>
+
+
+<p>Afterwards, start the SinusBot again (e.g. <code>systemctl start sinusbot</code>)</p>
+<h3 id="migrating-to-another-system">Migrating to another System<a class="headerlink" href="#migrating-to-another-system" title="Permanent link">🔗</a></h3>
+<p>First, install the SinusBot on the new system according to our guides.
+Afterwards, copy over the <code>data</code>-folder, <code>scripts</code>-folder, <code>config.ini</code> and <code>private.dat</code> from your old SinusBot installation folder (typically <code>/opt/sinusbot/</code> on Linux).</p>
+<p>Depending on how you copied the files, you might need to <a href="https://sinusbot.github.io/docs/faq/installation/#fix-file-permissions">fix your file permissions</a> afterwards.</p>
+<p>When finished, stop the SinusBot on the old system (e.g.<code>systemctl stop sinusbot</code>) and (re)start the SinusBot on the new system (e.g.<code>systemctl restart sinusbot</code>).</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">🔗</a></h2>
+<p>Look for any errors in the sinusbot/instance log and try to look-up solutions on our <a href="https://forum.sinusbot.com/">forum</a> or your favorite search engine.</p>
+<p>If you ask us or our community for help then please provide the output of the <a href="https://forum.sinusbot.com/threads/diagsinusbot-sh-sinusbot-diagnostic-script.831/">diag script</a> and follow everything that is mentioned in <a href="https://forum.sinusbot.com/threads/read-me-before-you-post.115/">READ ME BEFORE YOU POST</a>.</p>
+<p>If you use the systemd-startscript you can check the status with <code>systemctl status sinusbot</code>.
+Logs can be viewed using <code>journalctl -u sinusbot -f --since "2 hours ago"</code>.</p>
+<hr />
+<p>The SinusBot itself is closed-source, but some of the resources are open-source and available in the <a href="https://github.com/SinusBot">SinusBot GitHub Organization</a> - contributions welcome.</p>
+<ul>
+<li><a href="https://github.com/SinusBot/docs">Documentation</a></li>
+<li><a href="https://github.com/SinusBot/scripting-docs">Scripting Documentation</a></li>
+<li><a href="https://github.com/SinusBot/installer-linux">Linux-Installer</a></li>
+<li><a href="https://github.com/SinusBot/linux-startscript">Startscript</a></li>
+<li><a href="https://github.com/SinusBot/scripts/tree/master/default-attached">Default SinusBot Scripts</a></li>
+<li><a href="https://github.com/SinusBot/docker">SinusBot Docker Image</a></li>
+<li>and more!</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../.." title="Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../windows/" title="Windows" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Windows
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; The SinusBot Team and Contributors.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://sinusbot.com" target="_blank" rel="noopener" title="sinusbot.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/SinusBot" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/sinusbot" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.facebook.com/sinusbot" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://forum.sinusbot.com" target="_blank" rel="noopener" title="forum.sinusbot.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

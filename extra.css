@@ -1,0 +1,22 @@
+:root {
+    --red: #e13438;
+}
+
+[data-md-color-primary=red] .md-header {
+    background-color: var(--red);
+}
+
+[data-md-color-accent=red] .md-nav__link:focus, [data-md-color-accent=red] .md-nav__link:hover {
+    color: var(--red);
+}
+
+@media only screen and (max-width: 76.1875em) {
+    html [data-md-color-primary=red] .md-nav--primary .md-nav__title--site {
+        background-color: var(--red);
+    }
+}
+
+.md-typeset .headerlink {
+	font: normal 400 1.2rem "Material Icons";
+	vertical-align: middle;
+}
