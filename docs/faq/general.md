@@ -24,6 +24,8 @@
 !!! success ""
     Sponsoring the SinusBot is currently not allowed without prior written permission of the author.
 
+    Private use (non-commercial and neither profiting directly nor indirectly in any way) such as sharing with your friends is fine of course.
+
 ### Where can I find the version of my SinusBot?  { #what-is-my-version}
 
 !!! success ""
@@ -45,7 +47,7 @@
 !!! success ""
     Yes, that's possible. The bot knows about several privileges that a user must have to do several kinds of actions. To make the bot recognize a TS user as a bot user, you can bind a TS account to a bot account on the Edit user page.
 
-    All available commands are listed at Settings -> Info -> Commands - including the required privileges to run them.
+    All available commands are listed at Settings -> Info -> Commands - including the required privileges to run them. Recent SinusBot versions also have a `!help` command.
 
 ### What's the maximum length/size of music files? { #max-file-size data-toc-label='Max. file size?' }
 
@@ -97,8 +99,8 @@
     In the past we got tons of support requests in case of the user is using an old and no longer supported version ([How to check my Bot Version?](https://sinusbot.github.io/docs/faq/general/#what-is-my-version)) of our software. We don't want this any more... So of course we need some rules!
 
     * Make sure you use an up to date version of:
-        * Linux (Ubuntu 16.10+, Debian 8+, CentOS 7+ or better)
-        * Windows (7, 8, 10, Server 2008, 2012 or better), with all latest Updates / Service Packs
+        * Linux (Ubuntu 18.04+, Debian 9+, CentOS 7+ or better)
+        * Windows (10, Server 2012 or better), with all latest Updates / Service Packs
     * Make sure you have the latest SinusBot version
     * Make sure you use a valid license for Teamspeak / a valid hosting provider with legal licenses.
 
@@ -113,8 +115,8 @@
     In der Vergangenheit haben wir massenhaft Support-Anfragen erhalten, wenn der Benutzer eine alte oder nicht mehr unterstützte Version unserer Software verwendet ([Wie kann ich meine Bot Version prüfen?](https://sinusbot.github.io/docs/faq/general/#what-is-my-version)). Wir wollen das nicht mehr ... Daher brauchen wir Regeln!
 
     * Stelle sicher, dass du eine aktuelle Betriebssystem Version verwendest:
-        * Linux (Ubuntu 16.10+, Debian 8+, CentOS 7+ oder besser)
-        * Windows (7, 8, 10, Server 2008, 2012 oder besser), mit allen Updates / Service Packs
+        * Linux (Ubuntu 18.04+, Debian 9+, CentOS 7+ oder besser)
+        * Windows (10, Server 2012 oder besser), mit allen Updates / Service Packs
     * Stelle sicher, dass du die aktuellste SinusBot Version hast
     * Stelle sicher das du eine gültige Teamspeak Lizenz verwendest, bzw dein Teamspeak Hoster sich an die Teamspeak Richtlinien hält.
 

@@ -2,7 +2,8 @@
 
 !!! warning "Please note the following restrictions"
     Licenses are **only** available **for the Linux version** of the bot.<br/>
-    Licenses are **only** available **for TeamSpeak** and not Discord.
+    Licenses are **only** available **for TeamSpeak** and not Discord.<br/>
+    Private use only, see [Disclaimer](#disclaimer).
 
 So you own a large server and two instances are not enough for you? For this case we're handing out free extended licenses which come with 4 more instances by default, so you've got a total of 6.
 
@@ -39,3 +40,7 @@ Make sure that...
 ## Disclaimer
 
 Every request will be checked manually and we reserve the right to deny requests without further notice (e.g. in case of abuse). We also reserve the right to discontinue this service or change the terms at any time.
+
+Whether you use a SinusBot license or not, the license agreement applies in any case (see `Settings -> Info -> About` in your SinusBot web-interface).
+
+!!! warning "You may NOT redistribute this software or use this software commercially without prior written permission from the author. See [FAQ](https://sinusbot.github.io/docs/faq/general/#commercial-use) for more information."

@@ -4,11 +4,13 @@
     You can check your Linux Kernel version with `uname -a`.
 
 Make sure that your OS (Operating System) is up-to-date.
-We recommend recent LTS releases such as **Ubuntu 18.04** or **Debian 10** (buster), minimal required versions:
+We recommend recent LTS releases such as **Ubuntu 20.04** or **Debian 10** (buster), minimal required versions:
 
-- Debian 8+
-- Ubuntu 16.10+
+- Debian 9+
+- Ubuntu 18.04+
 - CentOS 7+
+
+*Note: While it might be possible to use older versions in particular cases, we can only provide support for the above mentioned ones.*
 
 When choosing a VPS (virtual private server), make sure that it is **not** based on OpenVZ, because the Linux kernel will be too old. Instead choose a **KVM** or **LCX** based VPS with a recent OS.
 
@@ -107,7 +109,7 @@ Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
 # set the current/supported TS3 version here
-VERSION="3.3.2"
+VERSION="3.5.3"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
@@ -155,6 +157,8 @@ Just to make sure that the bot is executable, enter
 chmod 755 sinusbot
 ```
 
+(optional) To enable playback support for YouTube URLs and several other sites, we recommend [installing youtube-dl](https://sinusbot.github.io/docs/youtube-dl/#linux).
+
 ### Usage
 
 As [the bot won't run as root](https://sinusbot.github.io/docs/faq/installation/#why-cant-i-run-the-bot-as-root) you will need to switch to the user that you have installed the bot on, if you followed the tutorial, this will be 'sinusbot". To do this use the following command:
@@ -171,7 +175,7 @@ Starting the bot
 
 Stopping the bot with ++ctrl+c++
 
-!!! Info "If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using_a_startscript)."
+!!! Info "If you want to keep the bot running when you exit out of the terminal follow the instruction on how to [install a startscript](#using-a-startscript)."
 
 Now login at `http://<your ip>:8087/` with user **admin** and the password provided on first run. (see [FAQ](https://sinusbot.github.io/docs/faq/installation/#what-is-the-default-username-and-password) on how to reset)
 
@@ -205,6 +209,10 @@ Enable autostart (optional): `systemctl enable sinusbot`
 
 Start the sinusbot: `systemctl start sinusbot`
 
+Troubleshooting:
+
+- This requires you to have systemd as default; You can check this with `grep "Name" /proc/1/status` - It should return: `Name: systemd`. If you do not have systemd, [install systemd](https://wiki.debian.org/systemd#Installation) and then [set systemd as default](https://wiki.debian.org/systemd#Configuring_as_default).
+- To see the log and check for errors you can use `systemctl status sinusbot` and `journalctl -u sinusbot -f`.
 
 ### Update
 
@@ -212,7 +220,7 @@ Start the sinusbot: `systemctl start sinusbot`
 
 *Note: The following instructions assume that you've followed this guide - otherwise you might need to slightly adapt the commands to fit your installation.*
 
-Before continuing you should install the dependencies mentioned at the beginning of the "Manual installation" section.
+Before continuing you should [install the dependencies mentioned at the beginning of the "Manual installation" section](#manual-installation).
 
 The update process is the same as the installation, we simply download and unpack the new SinusBot version over the old one.
 
@@ -231,15 +239,24 @@ cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
 chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
+Afterwards, start the SinusBot again (e.g. `systemctl start sinusbot`)
+
+Note: When updating the SinusBot, you should also [Update the TeamSpeak Client](#update-the-teamspeak-client).
+
 #### Update the TeamSpeak Client
 
-Before continuing you should install the dependencies mentioned at the beginning of the "Manual installation" section.
+Before continuing you should [install the dependencies mentioned at the beginning of the "Manual installation" section](#manual-installation).
 
 The update process is the same as the installation, we simply download and unpack the new TeamSpeak Client over the old one.
 
+First stop your sinusbot (e.g. `systemctl stop sinusbot` if you use the systemd-startscript) and then run the following commands:
+
 ```bash
+# go into the sinusbot directory
+cd /opt/sinusbot
+
 # set the current/supported TS3 version here
-VERSION="3.3.2"
+VERSION="3.5.3"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
@@ -264,6 +281,8 @@ cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
 chown -R sinusbot:sinusbot /opt/sinusbot
 ```
 
+Afterwards, start the SinusBot again (e.g. `systemctl start sinusbot`)
+
 ### Migrating to another System
 
 First, install the SinusBot on the new system according to our guides.
@@ -287,6 +306,9 @@ Logs can be viewed using `journalctl -u sinusbot -f --since "2 hours ago"`.
 The SinusBot itself is closed-source, but some of the resources are open-source and available in the [SinusBot GitHub Organization](https://github.com/SinusBot) - contributions welcome.
 
 - [Documentation](https://github.com/SinusBot/docs)
+- [Scripting Documentation](https://github.com/SinusBot/scripting-docs)
 - [Linux-Installer](https://github.com/SinusBot/installer-linux)
 - [Startscript](https://github.com/SinusBot/linux-startscript)
+- [Default SinusBot Scripts](https://github.com/SinusBot/scripts/tree/master/default-attached)
+- [SinusBot Docker Image](https://github.com/SinusBot/docker)
 - and more!

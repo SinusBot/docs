@@ -1,7 +1,9 @@
 site_name: SinusBot Documentation
 site_url: https://sinusbot.github.io/docs/
-copyright: 'Copyright &copy; 2019 The SinusBot Team and Contributors.'
+copyright: 'Copyright &copy; The SinusBot Team and Contributors.'
 edit_uri: https://github.com/SinusBot/docs/edit/master/docs/
+repo_name: SinusBot/docs
+repo_url: https://github.com/SinusBot/docs/
 nav:
   - 'Introduction': 'index.md'
   - 'Installation':
@@ -13,6 +15,7 @@ nav:
       - 'NGINX': 'reverse-proxy/nginx.md'
       - 'Apache 2': 'reverse-proxy/apache2.md'
       - 'Common Adaptations': 'reverse-proxy/common-adaptations.md'
+    - 'Discord': 'installation/discord.md'
     - 'Increase TS Security Level': 'installation/increase-security-level.md'
   - 'FAQ':
     - 'General': 'faq/general.md'
@@ -26,13 +29,18 @@ nav:
   - 'Text-to-Speech': 'tts.md'
   - 'Speech Recognition': 'speechrecognition.md'
 theme:
-  name: 'material'
+  name: material
   font: false
-  logo: 'logo.svg'
-  favicon: 'https://sinusbot.github.io/favicon.ico'
+  logo: logo.svg
+  favicon: https://sinusbot.github.io/favicon.ico
+  features:
+    - instant
+#   - tabs
   palette:
     primary: 'red'
     accent: 'red'
+  icon:
+    repo: fontawesome/brands/github
 markdown_extensions: # see https://python-markdown.github.io/extensions/, https://facelessuser.github.io/pymdown-extensions/
   - codehilite
   - admonition
@@ -42,7 +50,7 @@ markdown_extensions: # see https://python-markdown.github.io/extensions/, https:
   - pymdownx.tilde
   - pymdownx.mark
   - toc:
-      permalink: "\ue157"
+      permalink: "🔗"
 extra_css:
   - extra.css
 extra:

@@ -13,7 +13,7 @@
 ### Can I download whole playlists from YouTube? { #download-youtube-playlists data-toc-label='Download YouTube Playlists' }
 
 !!! success ""
-    Yes, you can. This requires [installing youtube-dl](../../youtube-dl/). When creating a new playlist, you have the option to enter a URL from which the playlist will be fetched.
+    Yes, you can. This requires [installing youtube-dl](../../youtube-dl/). When creating a new playlist click "Show advanced options", then you have the option to enter a URL from which the playlist will be fetched.
 
 ### I want to integrate the bot into my website / remote control the bot via script. How can I do that? { #sinusbot-api-integration data-toc-label='SinusBot API Integration' }
 
@@ -23,4 +23,4 @@
 ### How can guests control the bot?
 
 !!! success ""
-    You can bind a bot user to a server group for that (for example: your default guest group) and set the privileges you want the guests to have. The web-interface will however always require a login.
+    Create a bot user account in your web-interface, edit it afterwards and bind it to the server group ID `-1` (this will match everyone). Then set the privileges you want the guests to have. The web-interface will however always require a login.
