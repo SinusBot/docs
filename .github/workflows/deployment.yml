@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Setup Python ${{ matrix.python-version }}
+    - name: Setup Python
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
@@ -21,10 +21,9 @@ jobs:
       run: |
         mkdocs build --verbose -d build
     - name: Deploy on Github Pages
-      uses: JamesIves/github-pages-deploy-action@master
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       if: github.ref == 'refs/heads/master'
       env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_BRANCH: master
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN 
         BRANCH: gh-pages
         FOLDER: build
