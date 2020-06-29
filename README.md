@@ -1,6 +1,6 @@
 # SinusBot Documentation
 
-[![Build Status](https://travis-ci.org/SinusBot/docs.svg?branch=master)](https://travis-ci.org/SinusBot/docs)
+![MKDocs](https://github.com/SinusBot/docs/workflows/MKDocs/badge.svg)
 
 This repository contains the source code for the [SinusBot Documentation](https://sinusbot.github.io/docs/).
 
