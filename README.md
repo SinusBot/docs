@@ -14,5 +14,5 @@ To view your changes locally:
 
 1. install [MkDocs](https://www.mkdocs.org/#installation) and the required extensions.
 
-    `pip install -U mkdocs mkdocs-material pygments pymdown-extensions`
+    `pip install -U -r requirements.txt`
 2. run `mkdocs serve`
