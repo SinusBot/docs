@@ -12,7 +12,7 @@ We recommend recent LTS releases such as **Ubuntu 20.04** or **Debian 10** (bust
 
 *Note: While it might be possible to use older versions in particular cases, we can only provide support for the above mentioned ones.*
 
-When choosing a VPS (virtual private server), make sure that it is **not** based on OpenVZ, because the Linux kernel will be too old. Instead choose a **KVM** or **LCX** based VPS with a recent OS.
+When choosing a VPS (virtual private server), make sure that it is **not** based on OpenVZ, because the Linux kernel will be too old. Instead choose a **KVM** or **LXC** based VPS with a recent OS.
 
 The server should have *at least* 512MB or 1GB of free RAM.
 Although the SinusBot itself doesn't require much RAM, the TeamSpeak Client(s) often take up the most memory.
