@@ -17,7 +17,7 @@ We do have a "Donor" group on our forums that you will get automatically if you 
 
 ## How long does it take for the license to be approved?
 
-As mentioned above, licenses are done in batches every couple of days. It usually takes between 24 to 72 hours.
+As mentioned above, licenses are done in batches every couple of days. It usually takes between two days and one week.
 
 ## How long is such a license valid?
 
