@@ -4,8 +4,12 @@
 
 2. Go to "Bot" at the sidebar and click on "Add Bot".
 
-3. In the section "token" click on "copy" to copy the token.
+3. In the section "Privileged Gateway Intents" enable the "Message Content Intent".
 
-4. Paste the token with ++ctrl+v++ into the sinusbot-instance-creation form.
+![Message intent](message_intent.png)
 
-5. (Optional: Add the bot to your discord-server by creating a OAuth2-link by visiting the page "OAuth2" in the Discord-Developers-sidebar and selecting scope "bot". Open then the provided URL in your browser.)
+4. In the section "Token" click on "Copy" to copy the token.
+
+5. Paste the token with ++ctrl+v++ into the sinusbot-instance-creation form.
+
+6. (Optional: Add the bot to your discord-server by creating a OAuth2-link by visiting the page "OAuth2" in the Discord-Developers-sidebar and selecting scope "bot". Open then the provided URL in your browser.)
