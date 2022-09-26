@@ -42,12 +42,18 @@
 
     If you TeamSpeak Server has an big/animated server banner than that will significantly increase RAM usage.
 
-### Can I control the bot via TS chat commands? { #chat-commands data-toc-label='Chat Commands?' }
+### Can I control the bot via chat commands? { #chat-commands data-toc-label='Chat Commands?' }
 
 !!! success ""
-    Yes, that's possible. The bot knows about several privileges that a user must have to do several kinds of actions. To make the bot recognize a TS user as a bot user, you can bind a TS account to a bot account on the Edit user page.
+    Yes, that's possible. The bot knows about several privileges that a user must have to do several kinds of actions. To make the bot recognize a user as a bot user, you can bind a account to a bot account on the Edit user page.
 
     All available commands are listed at Settings -> Info -> Commands - including the required privileges to run them. Recent SinusBot versions also have a `!help` command.
+
+### My Bot doesn't respond to chat commands on Discord. Why? { #no-chat-commands-response data-toc-label='Discord Chat Commands broken?' }
+
+!!! success ""
+    Check in the [Discord Developer Portal](https://discord.dev) whether the Message Content Intent is enabled for your bot. It is required for bots to see the actual message content.
+    Read [this](https://support-dev.discord.com/hc/en-us/articles/4404772028055-Message-Content-Privileged-Intent-FAQ) for information about the intent.
 
 ### What's the maximum length/size of music files? { #max-file-size data-toc-label='Max. file size?' }
 
