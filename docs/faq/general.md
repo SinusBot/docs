@@ -45,7 +45,7 @@
 ### Can I control the bot via chat commands? { #chat-commands data-toc-label='Chat Commands?' }
 
 !!! success ""
-    Yes, that's possible. The bot knows about several privileges that a user must have to do several kinds of actions. To make the bot recognize a user as a bot user, you can bind a account to a bot account on the Edit user page.
+    Yes, that's possible. The bot knows about several privileges that a user must have to do several kinds of actions. To make the bot recognize a user as a bot user, you can bind an account to a bot account on the Edit user page.
 
     All available commands are listed at Settings -> Info -> Commands - including the required privileges to run them. Recent SinusBot versions also have a `!help` command.
 
