@@ -23,7 +23,6 @@ If you are using no SSL (http):
 
     ProxyPass / http://127.0.0.1:8087/
     ProxyPassReverse / http://127.0.0.1:8087/
-
 </VirtualHost>
 ```
 
@@ -31,7 +30,7 @@ If you are using SSL (https) with http->https redirect:
 
 ```apache
 <VirtualHost *:80>
-    ServerName sinusbot.example.com
+    ServerName your_domain
     
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -41,12 +40,12 @@ If you are using SSL (https) with http->https redirect:
 </VirtualHost>
 
 <VirtualHost *:443>
-    ServerName bot.example.tld
+    ServerName your_domain
     
     SSLEngine On
-    SSLCertificateFile    /opt/ssl/cert.pem
-    SSLCertificateKeyFile /opt/ssl/privkey.pem
-    SSLCertificateChainFile /opt/ssl/fullchain.pem
+    SSLCertificateFile    /etc/letsencrypt/live/your_domain/cert.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/your_domain/privkey.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/your_domain/fullchain.pem
     
     ProxyPass / http://127.0.0.1:8087/
     ProxyPassReverse / http://127.0.0.1:8087/
@@ -59,6 +58,10 @@ If you are using SSL (https) with http->https redirect:
 Afterwards you need to link the file to the `sites-enabled` directory:
 
 `ln -sf /etc/apache2/sites-available/sinusbot.conf /etc/apache2/sites-enabled`
+
+or you activate the site via a2:
+
+`a2ensite sinusbot.conf`
 
 Enable the proxy-module:
 
