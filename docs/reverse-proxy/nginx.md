@@ -21,7 +21,7 @@ server {
     listen [::]:80;
     
     # Set your domain here:
-    server_name sinusbot.example.com;
+    server_name your_domain;
 
     client_max_body_size 200M;
     

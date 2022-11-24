@@ -14,7 +14,7 @@ If you are using no SSL (http):
 
 ```apache
 <VirtualHost *:80>
-    ServerName sinusbot.example.com
+    ServerName your_domain
     
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
