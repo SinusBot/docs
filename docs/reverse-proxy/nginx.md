@@ -21,7 +21,7 @@ server {
     listen [::]:80;
     
     # Set your domain here:
-    server_name sinusbot.example.com;
+    server_name your_domain;
 
     client_max_body_size 200M;
     
@@ -48,7 +48,7 @@ server {
     listen [::]:80;
     
     # Set your domain here:
-    server_name sinusbot.example.com;
+    server_name your_domain;
     
     access_log /var/log/nginx/sinusbot.access.log;
     error_log  /var/log/nginx/sinusbot.error.log;
@@ -61,7 +61,7 @@ server {
     listen [::]:443 ssl http2;
     
     # Set your domain here:
-    server_name sinusbot.example.com;
+    server_name your_domain;
     
     client_max_body_size 200M;
     
@@ -70,8 +70,8 @@ server {
     
     # Set the path to your ssl cert here:
     ssl on;
-    ssl_certificate     /opt/ssl/fullchain.pem;
-    ssl_certificate_key /opt/ssl/privkey.pem;
+    ssl_certificate     /etc/letsencrypt/live/your_domain/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your_domain/privkey.pem;
     
     location / {
         proxy_pass http://127.0.0.1:8087;
