@@ -41,6 +41,9 @@ If you are using SSL (https) with http->https redirect:
 
 <VirtualHost *:443>
     ServerName your_domain
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
     
     SSLEngine On
     SSLCertificateFile    /etc/letsencrypt/live/your_domain/cert.pem
@@ -49,9 +52,6 @@ If you are using SSL (https) with http->https redirect:
     
     ProxyPass / http://127.0.0.1:8087/
     ProxyPassReverse / http://127.0.0.1:8087/
-    
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
