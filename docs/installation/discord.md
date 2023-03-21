@@ -1,6 +1,6 @@
 ![Demonstration GIF](discord.gif)
 
-1. Create a new [Application](https://discord.com/developers/applications) at the [Discord Developer Portal](https://discord.com/developers/).
+1. Create a new [Application](https://discord.com/developers/applications?new_application=true) at the [Discord Developer Portal](https://discord.com/developers/).
 
 2. Go to "Bot" at the sidebar and click on "Add Bot".
 
