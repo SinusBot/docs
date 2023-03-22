@@ -4,7 +4,7 @@ First you need to add a DNS record (A) which is pointing from your subdomain (e.
 
 Adjust the value of the following variables in the configuration examples below:
 
-- `ServerName`
+- `YOUR_DOMAIN` (domain of your sinusbot)
 - `ProxyPass` and `ProxyPassReverse` (port of your sinusbot)
 - `SSLCertificate*` (SSL only!)
 
@@ -14,7 +14,7 @@ If you are using no SSL (http):
 
 ```apache
 <VirtualHost *:80>
-    ServerName sinusbot.example.com
+    ServerName YOUR_DOMAIN
     
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -23,7 +23,6 @@ If you are using no SSL (http):
 
     ProxyPass / http://127.0.0.1:8087/
     ProxyPassReverse / http://127.0.0.1:8087/
-
 </VirtualHost>
 ```
 
@@ -31,34 +30,39 @@ If you are using SSL (https) with http->https redirect:
 
 ```apache
 <VirtualHost *:80>
-    ServerName sinusbot.example.com
+    ServerName YOUR_DOMAIN
     
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
     RewriteEngine on
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    RewriteCond %{SERVER_NAME}=YOUR_DOMAIN
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 
 <VirtualHost *:443>
-    ServerName bot.example.tld
-    
-    SSLEngine On
-    SSLCertificateFile    /opt/ssl/cert.pem
-    SSLCertificateKeyFile /opt/ssl/privkey.pem
-    SSLCertificateChainFile /opt/ssl/fullchain.pem
-    
-    ProxyPass / http://127.0.0.1:8087/
-    ProxyPassReverse / http://127.0.0.1:8087/
+    ServerName YOUR_DOMAIN
     
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
+    SSLEngine On
+    SSLCertificateFile    /etc/letsencrypt/live/YOUR_DOMAIN/cert.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/your_domain/fullchain.pem
+    
+    ProxyPreserveHost On
+    ProxyPass / http://127.0.0.1:8087/
+    ProxyPassReverse / http://127.0.0.1:8087/
+
+    Include /etc/letsencrypt/options-ssl-apache.conf
 </VirtualHost>
 ```
+> This example uses [Let's Encrypt](https://letsencrypt.org/) to generate the SSL certificate. If you are using a different certificate, you need to adjust the `SSLCertificate*` variables and remove the `Include` line.
 
-Afterwards you need to link the file to the `sites-enabled` directory:
+Afterwards you need to enable the configuration file:
 
-`ln -sf /etc/apache2/sites-available/sinusbot.conf /etc/apache2/sites-enabled`
+`a2ensite sinusbot`
 
 Enable the proxy-module:
 
