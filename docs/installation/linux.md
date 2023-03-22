@@ -26,6 +26,9 @@ SinusBot Version         | TS3 Client Version  | Linux Kernel Version | TeamSpea
 1.0.0-beta3 and later    | 3.3+                | 3.17+                | >= 3.8.x
 1.0.0-beta2, 1.0.0-beta1 | 3.2.5               | 2.6+                 | <= 3.9.x
 
+!!! Warning "Discord Support"
+    Due to breaking changes with the Discord voice gateway, Discord support is only available with the SinusBot version 1.0.2 and later.
+
 Please note that we do not support old beta releases. See [Support Policy / Support Grundregeln](https://sinusbot.github.io/docs/faq/general/#support-policy).
 
 ## Installer Script
