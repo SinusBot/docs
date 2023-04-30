@@ -22,16 +22,17 @@ server {
     
     # Set your domain here:
     server_name YOUR_DOMAIN;
-
-    client_max_body_size 200M;
     
     access_log  /var/log/nginx/sinusbot.access.log;
     error_log   /var/log/nginx/sinusbot.error.log;
     
     location / {
         proxy_pass http://127.0.0.1:8087;
-        proxy_http_version 1.1;
-        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Host $host:$server_port;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_buffers 16 16k;
+        proxy_buffer_size 16k;
 
         # pass upgrade/connection headers for websockets
         proxy_set_header Upgrade $http_upgrade;
@@ -63,8 +64,6 @@ server {
     # Set your domain here:
     server_name YOUR_DOMAIN;
     
-    client_max_body_size 200M;
-    
     access_log /var/log/nginx/sinusbot.access.log;
     error_log  /var/log/nginx/sinusbot.error.log;
     
@@ -75,8 +74,11 @@ server {
 
     location / {
         proxy_pass http://127.0.0.1:8087;
-        proxy_http_version 1.1;
-        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Host $host:$server_port;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_buffers 16 16k;
+        proxy_buffer_size 16k;
 
         # pass upgrade/connection headers for websockets
         proxy_set_header Upgrade $http_upgrade;
