@@ -23,6 +23,7 @@ Make sure that the server has enough free disk space to fit your needs.
 
 SinusBot Version         | TS3 Client Version  | Linux Kernel Version | TeamSpeak Server Version
 -------------------------|---------------------|----------------------|--------------------------
+1.0.2 and later          | 3.5+                | 3.17+                | >= 3.8.x
 1.0.0-beta3 and later    | 3.3+                | 3.17+                | >= 3.8.x
 1.0.0-beta2, 1.0.0-beta1 | 3.2.5               | 2.6+                 | <= 3.9.x
 
@@ -87,13 +88,13 @@ Then we will switch over to the recently created user dedicated for the sinusbot
 ```bash
 su sinusbot
 cd /opt/sinusbot
-wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
+wget https://www.sinusbot.com/pre/sinusbot-1.0.2-amd64.tar.bz2
 ```
 
 If that command results in SSL-Errors, you can **alternatively** try
 
 ```bash
-curl -O https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
+curl -O https://www.sinusbot.com/pre/sinusbot-1.0.2-amd64.tar.bz2
 ```
 
 Next, extract the bot:
@@ -112,7 +113,7 @@ Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
 # set the current/supported TS3 version here
-VERSION="3.5.3"
+VERSION="3.5.6"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
@@ -233,9 +234,9 @@ First stop your sinusbot (e.g. `systemctl stop sinusbot` if you use the systemd-
 # go into the sinusbot directory
 cd /opt/sinusbot
 # download the current release
-wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
+wget https://www.sinusbot.com/pre/sinusbot-1.0.2-amd64.tar.bz2
 # unpack it
-tar -xjvf sinusbot.current.tar.bz2
+tar -xjvf sinusbot-1.0.2-amd64.tar.bz2
 # copy the plugin
 cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
 # fix the file permissions if you're doing this as root
