@@ -23,8 +23,12 @@ Make sure that the server has enough free disk space to fit your needs.
 
 SinusBot Version         | TS3 Client Version  | Linux Kernel Version | TeamSpeak Server Version
 -------------------------|---------------------|----------------------|--------------------------
+1.0.2 and later          | 3.5+                | 3.17+                | >= 3.8.x
 1.0.0-beta3 and later    | 3.3+                | 3.17+                | >= 3.8.x
 1.0.0-beta2, 1.0.0-beta1 | 3.2.5               | 2.6+                 | <= 3.9.x
+
+!!! Warning "Discord Support"
+    Due to breaking changes with the Discord voice gateway, Discord support is only available with the SinusBot version 1.0.2 and later.
 
 Please note that we do not support old beta releases. See [Support Policy / Support Grundregeln](https://sinusbot.github.io/docs/faq/general/#support-policy).
 
@@ -109,7 +113,7 @@ Now you need to download the TeamSpeak 3 Client and **install it**.
 
 ```bash
 # set the current/supported TS3 version here
-VERSION="3.5.3"
+VERSION="3.5.6"
 wget https://files.teamspeak-services.com/releases/client/$VERSION/TeamSpeak3-Client-linux_amd64-$VERSION.run
 chmod 0755 TeamSpeak3-Client-linux_amd64-$VERSION.run
 ./TeamSpeak3-Client-linux_amd64-$VERSION.run
