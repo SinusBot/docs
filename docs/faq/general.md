@@ -2,6 +2,7 @@
 
 !!! success ""
     Yes you can! Check out the page about [Licenses](../../licenses/) for more.
+    For the Linux version you don't need a license anymore. The licensing system was removed in v1.0.1.
 
 ### Where and how to get the hosting version? I want to sell the bot! { #commercial-use data-toc-label='Commercial Use?' }
 
