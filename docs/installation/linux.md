@@ -88,13 +88,13 @@ Then we will switch over to the recently created user dedicated for the sinusbot
 ```bash
 su sinusbot
 cd /opt/sinusbot
-wget https://www.sinusbot.com/pre/sinusbot-1.0.2-amd64.tar.bz2
+wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
 ```
 
 If that command results in SSL-Errors, you can **alternatively** try
 
 ```bash
-curl -O https://www.sinusbot.com/pre/sinusbot-1.0.2-amd64.tar.bz2
+curl -O https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
 ```
 
 Next, extract the bot:
@@ -234,9 +234,9 @@ First stop your sinusbot (e.g. `systemctl stop sinusbot` if you use the systemd-
 # go into the sinusbot directory
 cd /opt/sinusbot
 # download the current release
-wget https://www.sinusbot.com/pre/sinusbot-1.0.2-amd64.tar.bz2
+wget https://www.sinusbot.com/dl/sinusbot.current.tar.bz2
 # unpack it
-tar -xjvf sinusbot-1.0.2-amd64.tar.bz2
+tar -xjvf sinusbot.current.tar.bz2
 # copy the plugin
 cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins/
 # fix the file permissions if you're doing this as root
