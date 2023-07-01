@@ -2,7 +2,7 @@
 
 1. Create a new [Application](https://discord.com/developers/applications?new_application=true) at the [Discord Developer Portal](https://discord.com/developers/).
 
-2. Go to "Bot" at the sidebar and click on "Add Bot".
+2. Go to "Bot" at the sidebar.
 
 3. In the section "Token" click on "Copy" to copy the token.
 
