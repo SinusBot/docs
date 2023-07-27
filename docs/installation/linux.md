@@ -4,11 +4,11 @@
     You can check your Linux Kernel version with `uname -a`.
 
 Make sure that your OS (Operating System) is up-to-date.
-We recommend recent LTS releases such as **Ubuntu 20.04** or **Debian 10** (buster), minimal required versions:
+We recommend recent LTS releases such as **Ubuntu 22.04.2** or **Debian 12** (bullseye), minimal required versions:
 
-- Debian 9+
-- Ubuntu 18.04+
-- CentOS 7+
+- Debian 10+
+- Ubuntu 20.04+
+- CentOS 8+
 
 *Note: While it might be possible to use older versions in particular cases, we can only provide support for the above mentioned ones.*
 
